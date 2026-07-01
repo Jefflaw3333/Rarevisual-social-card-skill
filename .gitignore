@@ -17,6 +17,7 @@ outputs/
 
 # Node + macOS
 node_modules/
+py-libs/
 .DS_Store
 *.log
 npm-debug.log*
