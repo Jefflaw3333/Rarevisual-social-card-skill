@@ -71,6 +71,37 @@ Turn these three game clips into a triple Live Photo collage with Swiss-style gu
 - ✅ **Validator**: `validate-social-deck.mjs` auto-detects overflow, type cap violations, 4-band density gaps, and footer collisions
 - 📄 **Single-file HTML + Playwright rendering**: no frontend build pipeline; `node render.mjs` outputs PNG directly
 
+## Live Photo effects and layouts
+
+In this skill, Live Photo means "put the user's video into a social-card layout." It is not random stock-video sourcing and not long-form video editing. First make the first frame work as a still card; then let `3s/5s` of motion add evidence.
+
+| Layout | Effect | Best for |
+|--------|--------|----------|
+| Single-video motion card | One video cropped to full-canvas `3:4`; when text is needed, use one short headline only and follow `M16 Image-Led Cover` / `image-overlay` rules for subject safety, quiet zones, type, and localized tint | Coffee, travel, fitness moves, product states, game moments |
+| Two-grid / three-grid / four-grid puzzle | Multiple video wells inside one Live Photo, usually with no added text so strong footage leads | Travel scenery, fashion picks, room details, food process, workout actions |
+| Triple Live Photo collage | Three short clips in parallel, increasing information density inside the short duration; add at most one real scene headline when needed | Guide steps, before/after, multi-angle demos, model test results |
+| Long-video diagnosis | Sparse frames / contact sheet for long source videos, then recommend trimming, speed-up, splitting, or asking the user for an exact range | 1-3 minute user videos without a chosen moment |
+| Publishing package | Debug `JPG + MOV` plus an iPhone-friendly `.pvt` package | Xiaohongshu and WeChat Official Account article Live Photos |
+
+Judge the information budget first: WeChat `3s` is best for one action point or one state change; Xiaohongshu `5s` can hold one compact process; triple collages are for three parallel results, not a long sequential story.
+
+## Live Photo generation guide
+
+1. **Confirm platform and assets**: user-supplied video is the default input; sourced public video is only for demo / promo testing. Confirm Xiaohongshu, WeChat Official Account article, or local test.
+2. **Judge information density**: ask what the viewer can understand in `3s/5s`. If it needs narration, audio, or a full tutorial, do not force it into Live Photo.
+3. **Choose the structure**: one strong clip becomes a single-video card; multiple strong clips become two-grid / three-grid / four-grid; three parallel results become a triple collage; long videos get low-cost diagnosis first.
+4. **Check the still card first**: the first frame must read as a polished social card. Check crop, subject, text placement, platform safe area, and never turn production requirements into visible audience copy.
+5. **Generate motion assets**: output preview video, key JPG, MOV, and `.pvt` inside the task folder; do not write generated files into the skill root.
+6. **Deliver with publishing notes**: Xiaohongshu uses `5s`; WeChat Official Account article Live Photo should stay at `3s`; usually transfer the `.pvt` as one package to iPhone and publish from the matching mobile app, because desktop/web paths generally cannot publish Live Photo.
+
+Useful prompts:
+
+```text
+Turn this coffee video into a 5-second Xiaohongshu Live Photo. Use only one headline and avoid the cup and hand.
+These four travel clips are strong. Make a four-grid Live Photo with no added text.
+Make a contact sheet from this 2-minute game video and recommend the best 5 seconds for a guide-style Live Photo.
+```
+
 ## Fits / Doesn't fit
 
 **✅ Fits**: Xiaohongshu carousels / Live Photo motion cards / WeChat cover pairs / Moments covers / Channels covers / article visuals / tutorial pages / data recaps / travel guides / product reviews / screenshot explainers
