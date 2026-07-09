@@ -1,17 +1,75 @@
 # Category Cookbook
 
-Per-category cheat sheet for the 11 most common Rednote (小红书) content types. Each entry maps a category to:
+> Fork of `guizang-social-card-skill` v0.15, rebranded for **Rare Visual** (rarevisual.com) — a premium handcrafted accessories DTC brand for women 25–45 in the US. Voice: *"Handcrafted accessories that turn everyday outfits into something intentional."*
 
-- **What we can do** — concrete poster types this skill produces well.
-- **Style mode** — which side of the system (Editorial / Swiss) fits.
-- **Recipes** — which layout IDs (M01-M15 / S01-S12) are first reach.
+Per-category cheat sheet for the **11 content categories** this skill routes for Rare Visual. Each entry maps a category to:
+
+- **What we can do** — concrete poster types this skill produces well for RV.
+- **Capability** — which side of the 3-bucket circle this category lands in.
+- **Recipes** — which layout IDs (M01–M16 / S01–S12) are first reach.
+- **Style mode** — which side of the system (Editorial / Swiss) and which theme preset fits.
 - **Text scheme** — how text relates to image (text-on-image / text-beside-image / text-only).
-- **Image source** — where the photos come from.
-- **Common pitfalls** — the way this category breaks.
+- **Image source** — where the photos come from (RV catalog, user-supplied, web).
+- **Content shape** — page count and page-by-page structure.
+- **Pitfalls** — the way this category breaks for an accessories brand.
 
 This is a routing document. When the user names a category, find the row here and start from the listed recipes instead of building from a blank file.
 
 For any category, if a poster has a full-bleed image with text on top, also follow `image-overlay.md` (photo qualification, localized tint fallback, and subject avoidance).
+
+---
+
+## Rare Visual Category Capability
+
+This is the **RV-flavored** version of the capability circle. Use it to triage any incoming brief before picking recipes.
+
+### Bucket 1 — Strong end-to-end (text + structure + image story all in scope)
+
+The skill can produce these posts from a brief alone, including a coherent image story:
+
+| Category | Why it's strong |
+| --- | --- |
+| 穿搭 · Styling / Outfit Pairings | We can render the jewelry + outfit pairings in Editorial warm-brass or Swiss IKB. The "5 ways to wear one piece" or "work-to-dinner" format maps cleanly to S11 ledger + M02 detail crops. |
+| 推荐 · Gift Guides | "Best for her / mom / bridesmaid / anniversary" is a structured product recommendation problem → S12 matrix + S11 ledger + M04 pull-quote pull the whole thing off. |
+| 职场 · Work Styling | Office-to-evening accessorizing is data-shaped: "5 accessories for the office", "what to wear under a blazer" → S11 ledger + M16 image-led cover. No body shots required. |
+
+### Bucket 2 — Strong copy + structure; image story needs user or curated RV catalog
+
+These posts work well, but you must source the imagery carefully — RV catalog flat-lays or user-supplied travel/vanity photos:
+
+| Category | Why it's partial | What unblocks it |
+| --- | --- | --- |
+| 旅行 · Styled Travel / Destination | Text/structure fine; the destination photo is the whole story. | User trip photo, or RV catalog flat-lay styled on a hotel tray or beach towel. |
+| 家居 · Vanity / Jewelry Storage | "How I store my jewelry" or "vanity setup" is on-brand. | User vanity photo, or staged flat-lay of jewelry on a tray/dish. |
+
+### Bucket 3 — Outside scope (push back honestly)
+
+Be explicit with the user. Do not promise a result the system was not designed to make:
+
+- **游戏 · Game** — not an accessories topic. No RV use case.
+- **影视 · Film & TV** — not an accessories topic. Only accept if the user can frame it around a styling moment (e.g. "get the look from the show"). Otherwise push back.
+- **彩妆 · Makeup** — different category. Only accept the small overlap (e.g. "earring + lipstick color pairing" or "statement jewelry with minimal makeup") — never as a general makeup tutorial.
+- **健身 · Fitness** — never combine jewelry + gym (chain damage, snagging, sweat tarnishing). Push back if asked.
+- **情感 · Emotion / 氛围感** — pure atmospheric mood posts (dreamcore, hazy lights, glowy ovals) are explicitly banned by the anti-pattern list. Only accept **anchored** emotional angles: "anniversary gift essay", "treat-yourself self-purchase story", "what jewelry I wore at my wedding".
+- **穿搭 · OOTD full-body shots** — daily OOTD needs real body photography. The skill does not generate body shots. Refer to a photography workflow, not this skill.
+
+---
+
+## RV Content Pillars
+
+Every RV social card should ladder up to one of these 5 brand pillars. Pillars are how the brand repeats across channels; categories are how the user finds the post. Map pillar → card mode so we never publish a card that doesn't connect to brand strategy.
+
+| Pillar | What it's about | Best card modes | First-reach recipes |
+| --- | --- | --- | --- |
+| **Handcraft & Materials** | Education on gold-filled vs gold-plated vs solid brass; care guides; why small-batch matters. | Material breakdown, comparison ledger, myth-busting. | S02 (two-signal comparison) · S11 (specs ledger) · M14 (process pipeline) · M04 (manifesto pull-quote) |
+| **Styling & Outfit Pairings** | "5 ways to wear one necklace", work-to-dinner, capsule wardrobe accessories, season pairings. | Styling lookbook, capsule ledger, work-to-evening transitions. | M16 (image-led cover) · S11 (item ledger) · S12 (matrix) · M02 (field-note detail) |
+| **Gifting Excellence** | Gift guides by recipient (her, mom, bridesmaid, wife, friend), by occasion (anniversary, birthday, wedding, graduation), by price tier. | Gift matrix, "best of" roundups, occasion-specific hero pages. | S12 (recipient × price matrix) · S11 (price-anchored ledger) · M16 (hero cover) · M07 (closing note) |
+| **Behind the Scenes** | Artisan process, small-batch production, founder essay, sourcing story, packaging unboxing. | Process essay, BTS photo story, founder pull-quote. | M11 (marginalia essay) · M14 (process pipeline) · M02 (BTS photo) · M09 (thesis) |
+| **Customer Stories** | Real testimonials, real reviews, real wearer essays, UGC reshares. | Review quote card, testimonial ledger, customer photo story. | M04 (pull-quote review) · M13 (hero question) · S11 (review ledger) · M07 (closing note) |
+
+> **Rule of thumb:** if a brief doesn't naturally ladder to one of these 5 pillars, it's probably outside RV's brand territory — push back rather than force-fit.
+
+---
 
 ## Live Photo Scene Library
 
@@ -21,16 +79,13 @@ Use `references/live-photo-production.md` for duration limits and rendering deta
 
 | Scenario | User problem | Motion value | Best Live Photo form |
 | --- | --- | --- | --- |
-| 游戏攻略 / gameplay guide | A screenshot cannot explain timing, route, or operation rhythm | show the key move plus success state | single `5s` for one move; triple collage for three strategies or stages |
-| 产品更新 / product update | Static screenshots lack "how it works" proof | show trigger → interaction → result | single `3-5s`; triple collage for three features or three generated outputs |
-| 教程技巧 / tutorial | Step images are too fragmented | show the one critical action or failure-prone step | single `3-5s`; long videos should be trimmed, not compressed whole |
-| AI 模型测试 / model demo | Static results do not prove process or credibility | show prompt/process/result evidence | triple collage for multiple results; single for one clear generation path |
-| 旅行攻略 / travel | A pretty place photo has atmosphere but not process | add arrival, route, movement, or现场感 around a static guide card | single `5s`; avoid pure scenery loops with no informational role |
-| 生活方式 / packing / living | Product or object photos feel too staged | show real handling, packing, opening, setup, or use | single `5s`; triple collage for checklist-style sequences |
-| 电商种草 / product rec | Product photos do not prove texture, scale, or use state | show touch, rotation, fit, before/after, or detail | single `3-5s`; triple collage for detail / scale / result |
-| 健身动作 / fitness movement | One pose cannot explain trajectory | show range, rhythm, or correction | single `3-5s`; triple collage for wrong / fix / result |
-| 美食手作 / food & craft | Finished photo misses the satisfying change | show pour, stir, cut, assemble, melt, or final reveal | single `3-5s`; avoid full recipes in one Live Photo |
-| 家居改造 / home before-after | Before/after static pair feels disconnected | show the transition or the practical action | single for one transformation; triple collage for before / process / after |
+| Jewelry close-up / 手作展示 / unboxing | A still photo cannot prove texture, weight, or scale | show the catch of light on metal, the way it moves, the clasp clicking shut | single `5s`; triple collage for the same piece from 3 angles |
+| Outfit pairing / 穿搭 | One styled photo is one opinion, not the full story | show the piece on the body, on the hand, then close-up of the metalwork | triple collage for one piece in 3 contexts; single for one signature look |
+| Travel styling / 旅行 | A pretty destination photo has atmosphere but no jewelry story | show piece being worn at destination, then a flat-lay on a hotel tray or beach surface | single `5s`; triple collage for "packing → arrival → worn at dinner" |
+| Lifestyle / vanity setup / 家居 | Object photos feel too staged | show the jewelry tray in use, drawer opening, the clasp clicking shut | single `5s`; triple collage for "morning vanity → day worn → evening stored" |
+| Gift unboxing / 推荐 | Product photos don't prove the gifting moment | show unwrapping, the card reveal, the first-try-on reaction | single `5s`; triple collage for "boxed → unwrapped → worn" |
+| Work-to-evening / 职场 | One styled office look doesn't show the transition | show office look → remove a layer / add a piece → dinner look | triple collage for the 3 stages of the transition |
+| Process / 手作过程 (BTS) | Finished photo misses the satisfying craft detail | show pour, file, polish, set, or final reveal | single `3-5s`; avoid showing the full making process in one Live Photo |
 
 Motion role shortcuts:
 
@@ -41,218 +96,218 @@ Motion role shortcuts:
 
 ---
 
-## 旅行 · Travel
+## 旅行 · Styled Travel / Destination
 
-**Strongest fit.**
+**Bucket 2** — strong copy + structure; needs user or curated RV imagery.
 
-- **Recipes**: M01 (text-led cover, no photo dominance) **or M16 (image-led cover, when the user has 1+ great photos)**, M02 (field-note photo), M11 (marginalia essay), M07 (closing note), S11 (itinerary ledger). For image-heavy submissions use the M16 → S11/M05 → M02 sequence in `references/content-planning.md`.
-- **Style mode**: Editorial × kraft-paper / dune (warm-tone destinations) or × forest-ink (mountain/wilderness). Swiss × IKB works for "trip data report" style.
+- **Recipes**: M01 (text-led cover, no photo dominance) **or M16 (image-led cover, when the user has a destination flat-lay of jewelry)** → M02 (field-note close-up of a piece worn in destination) → M11 (marginalia essay) → M07 (closing note) → S11 (packing-list ledger). For image-heavy submissions use the M16 → S11/M05 → M02 sequence in `references/content-planning.md`.
+- **Style mode**: Editorial × warm-brass (default) for warm-tone destinations (Tulum, Lisbon, Marrakech). Editorial × burnished-brass for sun-bleached coastal. Editorial × olive-stone for mountain / wilderness. Swiss × rv-gold only for "packing checklist data" style posts.
 - **Text scheme**: Text beside image is the default. Cover can use text-on-image only when the photo has a quiet zone; add localized tint only if the thumbnail check fails. Body pages use photo + caption pairs (field-note style).
-- **Image source**: User photos > Pexels (for China destinations — supports Chinese keyword search) > Unsplash (`/s/photos/<destination>`, best for overseas / English keywords) > Flickr CC (`license=2,3,4,5,6,9`, when you need documentary "real trip" feel rather than postcard polish). Always log to `assets/SOURCES.md`.
-- **Content shape**: 5-7 pages. Cover (destination + dates) → atmosphere photo + lead → itinerary ledger → 2-3 field notes (one location each) → closing quote / next-stop teaser.
-- **Pitfalls**: Generic "best places in X city" listicle voice. Cure: keep one specific date / weather / mileage detail per page to anchor it as observed, not researched.
-
-See: `local-tests/demo-image-01-yading/` for a reference build.
+- **Image source**: User destination photos (with their jewelry in frame) > RV catalog flat-lays on hotel trays / stone surfaces > Unsplash (`/s/photos/<destination>`, best for overseas / English keywords) > Flickr CC (`license=2,3,4,5,6,9`, when you need documentary "real trip" feel rather than postcard polish). Always log to `assets/SOURCES.md`.
+- **Content shape**: 5–7 pages. Cover (destination + jewelry in shot) → atmosphere photo + lead → packing-list ledger (which pieces to bring) → 2–3 field notes (one location each, piece styled in destination) → closing quote / next-stop teaser.
+- **Pitfalls**:
+  1. **Destination without jewelry** — a postcard-style travel cover with no piece in frame. Cure: every page must show the jewelry being worn or staged in destination, not just the place itself.
+  2. **Generic "best places in X city" listicle voice.** Cure: keep one specific date / weather / outfit detail per page to anchor it as observed, not researched.
+  3. **Cross-promoting a trip the user didn't take.** Stock-photo-only travel posts feel aspirational in the wrong way for a DTC brand — the promise is "this is what an RV piece looks like in real life".
 
 ---
 
-## 职场 · Workplace
+## 职场 · Work Styling
 
-**Strongest fit.** This is what Swiss-International was made for.
+**Bucket 1** — strong end-to-end. This is one of RV's three core formats.
 
-- **Recipes**: S01 (cover), S02 (comparison), S05 (warning rows), S06 (pipeline), S07 (takeaway ledger), S09 (KPI tower), S11 (stacked ledger), S12 (matrix + hero stat).
-- **Style mode**: Swiss × IKB Blue or × Safety Orange. Avoid lemon-yellow / lemon-green for serious workplace content; they read as marketing.
-- **Text scheme**: Text-only or text-with-diagram. Almost never text-on-photo (workplace photos read as stock).
-- **Image source**: Avoid stock business photos. If you need an image, prefer a diagram, a screenshot of a real artifact (Notion, Linear, Figma), or omit. Generated images rarely add value here.
-- **Content shape**: 5-9 pages. Cover question / claim → context KPI → 3-5 numbered insights as ledger → one comparison or pipeline diagram → takeaway.
+- **Recipes**: S01 (cover) · S02 (work vs dinner comparison) · S11 (5-accessories-for-the-office ledger) · M16 (image-led cover for "the one piece that changes everything") · S07 (takeaway ledger) · M11 (work-to-evening essay marginalia).
+- **Style mode**: Editorial × warm-brass for the default office look. Swiss × rv-gold for "office data" / capsule accessory counts. Avoid honey / sage for serious work-styling content; they read as marketing.
+- **Text scheme**: Text-beside-image is default (small jewelry crop + outfit note). Almost never text-on-photo for body pages. Cover can use text-on-image if the cover photo has a quiet zone.
+- **Image source**: RV catalog flat-lays of pieces on neutral office surfaces (folded blazer, linen tote, ceramic mug) > user office photos. Avoid stock business photos — handshake, laptop-with-coffee. If you need an image, prefer a flat-lay or omit.
+- **Content shape**: 5–9 pages. Cover (one piece + claim like "the only accessory you need at 9am and 7pm") → "5 accessories for the office" ledger → work-to-dinner transition diagram (S02 or M02) → styling tips marginalia → closing takeaway.
 - **Pitfalls**:
-  1. **Listicle voice** ("8 个让你..."). Cure: rewrite as a numbered argument, not numbered tips. Each row makes a falsifiable claim, not a platitude.
-  2. **Cheap "advice" energy** — soft language ("一定要", "千万别"). Cure: replace with observed action verbs and a number.
-  3. **Stock-photo seasoning** — handshake, laptop-with-coffee. Cure: omit, or use a small Lucide icon glyph instead.
+  1. **Listicle voice** ("8 accessories for the office"). Cure: each row makes a falsifiable claim ("Layered under a blazer, the Audrey chain disappears — pull the collar, and it's the whole outfit"), not generic advice.
+  2. **Cheap "advice" energy** — soft language ("一定要", "千万别"). Cure: replace with observed action verbs and a specific piece name.
+  3. **Stock-photo seasoning** — handshake, laptop-with-coffee, woman-at-desk. Cure: omit, or use a small Lucide icon glyph instead.
+  4. **Pure office-only framing.** RV's "work-to-dinner" angle is the strongest — never close a work post without an evening transition.
 
 ---
 
 ## 游戏 · Game
 
-**Strong fit** for journals, recap, build/strat lists. **Has image-rights risk** that the user must accept.
+**Bucket 3 — Outside scope.** Not an RV content category.
 
-- **Recipes**: M01 (cover with full-bleed art), M08 (boss tier ledger), S07 (takeaway ledger), S11 (chapter timeline), M15 (build before/after).
-- **Style mode**: Editorial dark (ink-classic with paper inverted to near-black) for atmospheric games (黑神话 / Elden Ring). Swiss for esports / competitive data ("胜率 / KDA / 出装").
-- **Text scheme**: Text-on-image is standard for game covers because game art is the primary draw. Use subject mapping and thumbnail checks from `image-overlay.md`; add a localized, image-toned tint only where the title needs support.
-- **Image source**: Wallhaven JSON API (see SKILL.md Step 6) for keyword pulls, official screenshots for specific moments. Always disclose copyright risk and log to `SOURCES.md`. If user opts out of attribution, do not crop the credit out of the image itself.
-- **Content shape**: 4-6 pages. Cover (game name + playtime) → first impression page → chapter-by-chapter ledger → memorable boss / scene page → verdict.
-- **Pitfalls**: 
-  1. **Score-card seriousness** (8.5/10 in a giant block). We're not IGN — keep the verdict as one short clause, not a number.
-  2. **Generic fan-art covers** with the game logo retraced — looks counterfeit. Prefer key art the publisher already released.
-
-See: `local-tests/demo-image-02-wukong/` for a reference build.
+- **Recipes**: none first-reach.
+- **Style mode**: n/a.
+- **Text scheme**: n/a.
+- **Image source**: n/a.
+- **Content shape**: n/a.
+- **Push-back line**: "Game content isn't on Rare Visual's content map. If you want to talk about a styling moment from a game/show (e.g. jewelry in a game character design), reframe the brief as 穿搭 or 推荐 and we can produce it. Otherwise we should not publish this."
 
 ---
 
 ## 影视 · Film & TV
 
-**Strong fit** for reviews, scene analysis, quote cards. **Image-rights risk**, same as Game.
+**Bucket 3 — Outside scope**, with a narrow accept-criteria exception.
 
-- **Recipes**: M04 (pull quote — for memorable lines), M10 (evidence feature — for scene analysis), M11 (marginalia essay), S02 (two signals — for comparison reviews), S12 (matrix — for film weeklies).
-- **Style mode**: Editorial × ink-classic or × indigo-porcelain. Letterboxd visual vocabulary fits Editorial naturally — serif title, italic original-language subtitle, monospace metadata.
-- **Text scheme**: Text-beside-image for review cards (poster on left, take on right). Text-on-image only for atmospheric "what this film made me feel" quote pages.
-- **Image source**: Official posters / stills. Do not generate fake stills — they look immediately wrong.
-- **Content shape**: For single film: cover (title + year + 1-line take) → 1-2 scene captures → director-quote / theme pullquote → verdict ledger. For weekly: matrix of 6-9 films + one hero recommendation.
-- **Pitfalls**: 
-  1. **Fake film-festival typography** — adding fake awards badges. Don't.
-  2. **Spoiler in title without warning.** If a cover gives away the ending, mark `剧透` in the kicker.
+- **Acceptable only when**: the user can anchor the post to a styling moment — "get the look from [show/film]", "the jewelry in [period drama]", "what I'd wear to a [show] premiere". Reframe as 穿搭 or 推荐 in those cases.
+- **Recipes** (when accepted): M04 (pull quote for a memorable styling line) · M10 (evidence feature for jewelry-on-character analysis) · M11 (marginalia essay) · S02 (two-signal comparison of two styling moments) · S12 (matrix for "best jewelry moments in [show]").
+- **Style mode**: Editorial × warm-brass or × stone-blue for the styling-essay angle.
+- **Text scheme**: Text-beside-image for review cards (still + take). Text-on-image only for atmospheric "what this styling made me feel" quote pages.
+- **Image source**: Official stills / press photos only. Do not generate fake stills.
+- **Content shape**: For single show styling: cover (title + styling take) → 1–2 scene captures → director / costume-design pull-quote → verdict ledger of pieces.
+- **Pitfalls**:
+  1. **Generic review voice** ("this film is a masterpiece"). Cure: anchor every claim to one styling detail and one RV-relevant takeaway.
+  2. **Spoiler in title without warning.** If a cover gives away the ending or a styling reveal, mark `剧透` in the kicker.
 
 ---
 
 ## 美食 · Food
 
-**Split fit.** Recipes work. Food-photo showcase does not.
+**Bucket 3 / 边缘 Bucket 2** — only the narrow RV crossover is acceptable (table styling, gold cutlery, hosting).
 
-### What works: recipes & food essays
-
-- **Recipes**: M16 (image-led cover when finished-dish photo is hero-worthy) → S11 (ingredient/price ledger) → M14 (cooking steps pipeline) → M02 (extra dish detail). Also M05 (checklist for shopping list).
-- **Style mode**: Editorial × kraft-paper feels like a cookbook. Swiss × Lemon Yellow / Safety Orange works for "cost-per-serving" data posts.
-- **Text scheme**: Text-with-image. The finished-dish photo is one frame; everything else is text/data.
-- **Image source**: User photos of finished dish are best. For 中式菜品 / 国内餐厅 scenes, try Pexels first (Chinese keyword search hits 国内场景 better than Unsplash). Unsplash food photos read as Western stock; use sparingly.
-- **Content shape**: 5-7 pages. Cover (dish name + one verdict line) → ingredients ledger → numbered steps pipeline → finished-dish photo page → tips / variation marginalia.
-
-### What does not work: food-photo showcase / restaurant reviews requiring drool-shot art direction
-
-- We don't shoot food, and stock food photos kill the "I cooked this" trust signal.
-- For restaurant posts, require user-shot photos at the table. If they don't have them, push back — a stock-photo restaurant post is filler.
-- For "look at this cake" pure-display posts, refer the user to a photography-focused workflow, not this skill.
-
-**Pitfalls**:
-1. **Excited recipe voice** ("超绝!!!"). Editorial doesn't shout — let the dish do the talking.
-2. **Calorie-shaming asides** in casual recipes. Drop them.
+- **Acceptable**: gold cutlery flat-lay, tablescape styling with jewelry as the centerpiece, "hosting jewelry" (statement earrings for dinner parties, bracelets that don't catch on linen, necklaces that sit above a high neckline). Treat as a 家居 / 穿搭 crossover, not as a food post.
+- **Not acceptable**: recipes, restaurant reviews, drool-shot art direction, finished-dish hero photos. RV does not do food.
+- **Recipes** (when accepted): M16 (image-led cover with gold cutlery flat-lay) → S11 (tablescape ledger) → M02 (detail crop of a piece worn at the table) → M07 (closing hosting tip).
+- **Style mode**: Editorial × warm-brass or × ivory. The cookware-on-linen vibe fits.
+- **Text scheme**: Text-with-image. The tablescape is one frame; everything else is text/data.
+- **Image source**: RV catalog flat-lay (gold cutlery + brass jewelry on linen) > user hosting photos. Stock food photos read as Western stock and break the brand trust signal.
+- **Push-back line** for non-crossover food posts: "Food content isn't on Rare Visual's content map. If you have a hosting / tablescaping angle with jewelry in frame, we can produce that as a 家居 or 穿搭 crossover."
 
 ---
 
 ## 彩妆 · Makeup
 
-**Split fit.** Tutorials and product reviews work. Selfie-driven "look" posts need user images we can't generate.
+**Bucket 3 — Outside scope**, with a narrow makeup-jewelry crossover exception.
 
-### What works
-
-- **Recipes**: M14 (tutorial step pipeline), S12 (product matrix), S11 (空瓶 / 复购 ledger), S02 (色号对比).
-- **Style mode**: Swiss × Lemon Yellow / Lemon Green / Safety Orange for bright product reviews. Editorial × indigo-porcelain for editorial-feel beauty essays.
-- **Text scheme**: Text-with-image. Each step gets a small hand/face crop + a one-sentence instruction.
-- **Image source**: User photos. Stock makeup photos have legal grey areas and look generic.
-- **Content shape**: Tutorial — cover (look name + occasion) → tools/products ledger → 5-7 numbered step pipeline → finish photo → tips marginalia.
-
-### What does not work
-
-- "Get-the-look" posts that rely on a recognizable model face. We can't generate those reliably; user must supply.
-- Trending Y2K / 哥特 / dolly aesthetic decoration — outside the Swiss/Editorial system.
-
-**Pitfalls**:
-1. **Color-swatch inaccuracy** if you eyeball CSS hex from a photo. Always ask the user for the official shade name + hex from the brand.
-2. **Skin-tone homogenization** when scaling photos — preserve user-supplied photos at native ratio.
+- **Acceptable only when**: the user frames the post as a makeup + jewelry pairing — "the earrings that disappear under a red lip", "no-makeup makeup with statement jewelry", "what to wear when your makeup is the look". The jewelry is the hero; the makeup is the supporting frame.
+- **Not acceptable**: full makeup tutorials, "get the look" posts requiring a recognizable model face, color-swatch breakdowns, foundation shade matching. RV is not a beauty brand.
+- **Recipes** (when accepted): S11 (jewelry-led ledger with a small makeup note column) · M02 (pairing detail crop) · M04 (manifesto pull-quote on "less makeup, more metal"). Do not use M14 as a makeup tutorial pipeline.
+- **Style mode**: Editorial × warm-brass or × stone-blue for the jewelry-hero pairing.
+- **Text scheme**: Text-beside-image — small jewelry hero, small makeup crop, one sentence on the relationship.
+- **Image source**: User pairing photos. Stock makeup photos have legal grey areas and look generic.
+- **Pitfalls**:
+  1. **Color-swatch inaccuracy** if you eyeball CSS hex from a photo. Always ask the user for the official shade name + hex.
+  2. **Sliding from jewelry × makeup pairing into a generic makeup tutorial.** If the brief becomes "5-step night-out makeup", push back.
 
 ---
 
 ## 健身 · Fitness
 
-**Half fit.** Training plans and nutrition data work. Progress photos need user.
+**Bucket 3 — Outside scope.** Never combine jewelry + gym.
 
-- **Recipes**: M14 (workout pipeline), S11 (set/rep ledger), S09 (KPI tower for weekly volume), M15 (before/after — needs user photos).
-- **Style mode**: Swiss × Safety Orange / Lemon Green for energetic training posts. Editorial × forest-ink for "mindful movement / 山系跑步" essays.
-- **Text scheme**: Mostly text-with-data. Progress posts text-beside-image.
-- **Image source**: User progress photos (mandatory for before/after). For ambient illustrations, generated gym/outdoor shots are fine.
-- **Content shape**: Training plan — cover (cycle name + duration) → weekly schedule ledger → per-day pipeline of exercises → recovery / nutrition note → closing data.
+- **Push-back line**: "We don't pair Rare Visual jewelry with fitness content — chains snag, metal tarnishes with sweat, and the brand promise is 'intentional everyday wear', not workout gear. If you want to talk about post-workout styling or recovery-day jewelry (e.g. what's safe to leave on for a walk, a yoga class that's low-impact), we can frame that as 穿搭 — but no gym hero shots, no progress photos, no before/after."
+- **Recipes**: none. Do not use S09, M14, M15 for RV.
+
+---
+
+## 家居 · Vanity / Jewelry Storage
+
+**Bucket 2** — strong copy + structure; image story needs user or RV catalog.
+
+- **Recipes**: M16 (image-led cover when user has a strong vanity photo) → S11 (storage ledger with price) → M02 (detail crops of trays, dishes, drawer inserts) → M11 (marginalia on "my morning jewelry routine"). Also M15 (before/after — needs paired user photos for a vanity transformation), M03 (essay-style "how I store my jewelry" manifesto).
+- **Style mode**: Editorial × warm-brass or × ivory for warm linen/wood vanity setups. Editorial × stone-blue for cool modern marble. Swiss × rv-gold for "vanity data" posts (counting pieces by category, cost per storage slot, etc.).
+- **Text scheme**: Item recommendations are text-beside-image (small product crop + name + price + reason). Before/after is two photos with mid-page divider. Storage ledger rows are text + small thumbnail.
+- **Image source**: User vanity photos (best — the storage context is personal) > RV catalog flat-lays of jewelry on trays/dishes/stands > carefully attributed Unsplash for vanity scene backgrounds.
+- **Content shape**: Vanity rec — cover (vanity style + budget) → 4–6 storage item rows ledger → 1 hero detail crop → closing tip. Storage routine — cover → "morning routine" ledger → 1–2 detail crops → closing note.
 - **Pitfalls**:
-  1. **Fake aspirational numbers** (50 kg 卧推 8 周从 0 起步). Don't.
-  2. **Body-shaming subtext** in before/after captions. Use neutral language.
-
----
-
-## 家居 · Home & Living
-
-**Half fit.** Item recommendations, before/after, and floorplan analysis work. Pure interior-design photo posts need user photos.
-
-- **Recipes**: M16 (image-led cover when user has a strong room photo) → S11 (item ledger with price) → M02 (detail crops). Also M15 (before/after — needs paired user photos), M11 (marginalia for floorplan annotation), M03 (essay-style decor manifesto).
-- **Style mode**: Editorial × kraft-paper / dune for warm rustic homes. Editorial × indigo-porcelain for cool modern. Swiss × IKB for "rental hack data" posts.
-- **Text scheme**: Item recommendations are text-beside-image (small product crop + name + price + reason). Before/after is two photos with mid-page divider.
-- **Image source**: User interior photos. Web-sourced interior images have heavy copyright exposure (Pinterest creators are vigilant) — avoid unless user explicitly authorizes.
-- **Content shape**: Item rec — cover (room + budget) → 4-6 item rows ledger → 1 hero detail crop → closing tip.
-- **Pitfalls**: 
-  1. **Pinterest-aesthetic stock** that the user can't actually reproduce. Stick to what they live in.
+  1. **Pinterest-aesthetic stock** that the user can't actually reproduce (marble vanities, walk-in closets). Stick to what real RV customers live in: a tray on a dresser, a dish on a nightstand, a small ring holder.
   2. **Price drift** — products move quickly. Don't quote a price more than 90 days old without re-checking.
+  3. **Straying into interior design** (full room makeovers, paint colors, furniture). Reframe those posts to "vanity corner" scope.
 
 ---
 
-## 穿搭 · Outfit / Fashion
+## 穿搭 · Styling / Outfit Pairings
 
-**Weak fit.** Mood-board essays and product reviews work; OOTD full-body shots are outside our scope.
+**Bucket 1 — strong end-to-end.** This is RV's core category. Map every styling post to the **Styling & Outfit Pairings** pillar.
 
-### What works
-
-- **Recipes**: M11 (marginalia essay — "this week I wore"), S12 (item matrix), M04 (style manifesto pull-quote), S11 (capsule wardrobe ledger).
-- **Style mode**: Editorial × ink-classic / indigo-porcelain for editorial-feel essays. Swiss × Lemon Yellow / Safety Orange for capsule-wardrobe data posts.
-- **Text scheme**: Text-beside-image — small item crops as evidence, one full-body hero only if user provides.
-- **Image source**: User OOTD photos (we don't generate body shots). For mood-board context, web-sourced flat-lay or product photos are okay with disclosure.
-- **Content shape**: Capsule guide — cover (season + count) → wardrobe ledger → 1-2 outfit demonstrations → care/styling marginalia.
-
-### What does not work
-
-- Daily OOTD posts. The skill cannot generate or solicit body photography.
-- High-styling editorial fashion shoots — requires real photography production.
-
-**Pitfalls**: 
-1. **Brand-and-price-tag overload** turning every poster into an ad. Limit to 6 named items max.
-2. **Generic "minimalist 25 件夏季基础款" listicle**. Cure: anchor to a specific climate / lifestyle constraint.
+- **Recipes**: M16 (image-led cover) → S11 (capsule accessory ledger — "5 pieces, 7 outfits") → S12 (item matrix: piece × occasion) → M02 (outfit detail crop) → M11 (marginalia essay — "this week I wore") → M04 (style manifesto pull-quote) → M07 (closing note). For "5 ways to wear one piece", use S11 ledger with 5 styled rows + 1 hero detail.
+- **Style mode**: Editorial × warm-brass (default) for everyday styling. Editorial × warm-brass or × stone-blue for editorial-feel essays. Editorial × burnished-brass for sun-bleached summer styling. Swiss × honey / Safety Orange for capsule-wardrobe data posts ("the 7-piece accessory capsule that covers a workweek").
+- **Text scheme**: Text-beside-image — small jewelry + outfit crops as evidence, one full-body hero only if user provides. Cover can use text-on-image with quiet-zone tint if the photo supports it.
+- **Image source**: User OOTD photos (we don't generate body shots — be honest about this). For mood-board context, RV catalog flat-lays (piece on linen, on stone, in styled tray) work well and stay on-brand. Web-sourced flat-lays okay with disclosure.
+- **Content shape**:
+  - **Capsule guide** — cover (season + piece count) → wardrobe ledger → 1–2 outfit demonstrations → care/styling marginalia.
+  - **"5 ways to wear"** — cover (one hero piece) → 5 styled rows with different necklines / layers / occasions → closing styling tip.
+  - **Work-to-dinner** — cover (one piece, one claim) → 9am look → 7pm look → S02 comparison → closing tip.
+- **Pitfalls**:
+  1. **Brand-and-price-tag overload** turning every poster into an ad. Limit to 6 named pieces max, and only on the ledger pages.
+  2. **Daily OOTD posts.** The skill cannot generate body photography. Push the user to a photography workflow, or accept RV catalog flat-lays only.
+  3. **Generic "minimalist 25 件夏季基础款" listicle.** Cure: anchor to a specific climate / lifestyle constraint ("the 6-piece accessory capsule for hot, humid Singapore offices").
+  4. **High-styling editorial fashion shoots.** Requires real photography production. The skill produces the styling *narrative*, not the shoot.
 
 ---
 
 ## 情感 · Emotion / Personal Essay
 
-**Weak fit.** Essay-with-pullquote works. Dreamcore / 氛围感 aesthetic does not fit our system.
+**Bucket 3 — Outside scope for atmospheric mood**, with a narrow accept-criteria exception for anchored emotional angles.
 
-### What works
+- **Acceptable only when** the brief has a concrete RV anchor:
+  - Anniversary gift essay ("what I bought my mom for her 60th")
+  - Self-purchase "treat yourself" story
+  - Wedding / bridesmaid jewelry essay
+  - Memorial or heirloom piece story
+  - Founder / artisan personal essay
 
-- **Recipes**: M04 (pull quote / thesis), M09 (atmospheric thesis), M11 (marginalia essay), M13 (hero question — for rhetorical-question covers), M07 (closing note).
-- **Style mode**: Editorial × ink-classic or × dune. Magazine pace with restraint.
-- **Text scheme**: Mostly text-only with one quiet supporting image. The text is the content.
-- **Image source**: Quiet documentary-style photo (a window, a chair, a hand) — user-supplied is best. If sourcing: **Flickr CC** (`license=2,3,4,5,6,9`) is the strongest match — real interiors, real hands, real moments without stock polish. Pexels for China-context scenes (Chinese keyword search). Unsplash works but skews styled; avoid the "moodcore" gradient-light stock entirely.
-- **Content shape**: 3-5 pages. Cover question → essay split (M03) or atmospheric thesis → pull quote → closing note. Resist over-stretching to 9 pages.
+  Map these to the **Behind the Scenes** or **Customer Stories** pillar, not to the 情感 category as a whole.
 
-### What does not work
-
-- "梦核 / 氛围感" with soft fluorescent gradients, glowing ovals, hazy lights. Our anti-pattern list explicitly bans those decorations.
-- Y2K / 早期网络回忆 / 千禧辣妹 aesthetic — outside Swiss and Editorial both.
-- Heavy emoji / kaomoji captions. We use no emoji.
-
-**Pitfalls**:
-1. **Inspirational generic copy** ("愿你...愿我..."). Editorial demands specifics — name the day, the weather, the person.
-2. **Pretty empty space** — page after page of one pullquote on paper. Risk: reads as filler. Mix with one M02 field photo or M11 marginalia to ground it.
-
----
-
-## 推荐 · Recommended / Mixed
-
-**Default channel.** This category is the catch-all on the platform; the actual content underneath is always one of the above 10.
-
-When the user says 推荐 without specifying, ask which underlying type before designing. If they can't say, default to:
-
-- Swiss × IKB for "I tested 5 products" → S12 matrix + S11 ledger.
-- Editorial × kraft-paper for "this week's reading / watching" → M02 field notes.
+- **Not acceptable**:
+  - "梦核 / 氛围感" with soft fluorescent gradients, glowing ovals, hazy lights. The anti-pattern list explicitly bans those decorations.
+  - Y2K / 早期网络回忆 / 千禧辣妹 aesthetic.
+  - Heavy emoji / kaomoji captions. We use no emoji.
+  - Inspirational generic copy ("愿你...愿我..."). Editorial demands specifics — name the day, the weather, the piece.
+- **Recipes** (when accepted): M04 (pull-quote / thesis) · M09 (atmospheric thesis) · M11 (marginalia essay) · M13 (hero question — for rhetorical-question covers) · M07 (closing note) · M02 (one quiet supporting photo — a hand, a window, a piece on a dresser).
+- **Style mode**: Editorial × warm-brass (default) or × warm-brass. Magazine pace with restraint.
+- **Text scheme**: Mostly text-only with one quiet supporting image. The text is the content; the image is evidence.
+- **Image source**: Quiet documentary-style photo — user-supplied is best. RV catalog flat-lays of a single piece on linen work as the quiet supporting image. If sourcing: **Flickr CC** (`license=2,3,4,5,6,9`) is the strongest match for real interiors, real hands, real moments without stock polish. Avoid the "moodcore" gradient-light stock entirely.
+- **Content shape**: 3–5 pages. Cover question → essay split (M03) or atmospheric thesis → pull quote → closing note. Resist over-stretching to 9 pages.
+- **Pitfalls**:
+  1. **Inspirational generic copy.** Cure: name the day, the weather, the person, the piece.
+  2. **Pretty empty space** — page after page of one pullquote on paper. Risk: reads as filler. Mix with one M02 field photo or M11 marginalia to ground it.
 
 ---
 
-## Capability Circle Summary
+## 推荐 · Gift Guides / Recommendations
 
-Categories where this skill produces strong work end-to-end (text + structure + image story all from us):
+**Bucket 1 — strong end-to-end.** This is RV's second core category. Map every 推荐 post to the **Gifting Excellence** pillar.
 
-- 旅行 · 职场 · 推荐 (with subtype)
+- **Recipes**: M16 (image-led hero cover with a single hero piece or "best of" cover) → S12 (recipient × price matrix, e.g. mom × under $50 / under $100 / under $200) → S11 (gift ledger with 4–8 pieces, price-anchored) → M02 (one detail crop per hero piece) → M04 (closing pull-quote: "the one piece I'd gift if I could only gift one"). Also S02 (two-signal comparison: "for mom vs for friend", "for bridesmaid vs for wife") and S07 (takeaway ledger).
+- **Style mode**: Editorial × warm-brass (default) for "best for her / mom". Editorial × burnished-brass for collection roundups and "best of" lists with more drama. Swiss × rv-gold for the data-shaped version ("12 gifts under $100, ranked by re-purchase rate"). Swiss × brick only for price-comparison urgency posts.
+- **Text scheme**: Hero cover text-on-image with quiet-zone tint. Body pages text-beside-image (small piece crop + name + price + 1-line "why this piece"). The piece is the visual evidence; the text is the recommendation reasoning.
+- **Image source**: RV catalog flat-lays are the workhorse. One piece, one styled surface (linen, marble, leather). User photos only when the brief is "I gifted this and here's the reaction".
+- **Content shape**:
+  - **By recipient** — "Best gifts for mom / bridesmaid / wife / friend / the woman who has everything": cover → recipient matrix → 4–6 piece rows → closing tip.
+  - **By occasion** — "Anniversary / birthday / graduation / wedding / bridal shower": cover → occasion matrix → 4–6 piece rows → closing tip.
+  - **By price tier** — "Best under $50 / $100 / $200": cover → price tier matrix → 4–6 piece rows → closing tip.
+  - **The one piece** — hero recommendation: cover → one piece hero → 3 reasons → closing pull-quote.
+- **Pitfalls**:
+  1. **Generic "top 10 gifts" listicle.** Cure: anchor to a specific recipient or occasion with one observable detail ("for the mom who keeps her jewelry in a ceramic dish by the bed").
+  2. **Price drift** — gift posts get shared for months. Re-check all prices before publishing.
+  3. **Out-of-stock pieces.** Don't include a piece you can't link to a buyable URL. Filter the ledger to in-stock pieces only.
+  4. **All pieces, no recommendation.** A list of 12 SKUs is not a gift guide. The guide must make a case for each piece.
 
-Categories where the skill is strong on text/structure but needs user photos for image story:
+---
 
-- 游戏 · 影视 · 美食(食谱) · 彩妆(教程) · 健身 · 家居 · 穿搭(精选)
+## Rare Visual Category Capability — Summary
 
-Categories that are outside scope (skill cannot reliably produce):
+A compact reference of the 3-bucket circle, RV-flavored:
 
-- 美食(菜品大片摆盘) · 穿搭(日常 OOTD 全身) · 情感(梦核 / 氛围感装饰风)
+**Strong end-to-end (text + structure + image story all in scope):**
+
+- 穿搭 · Styling / Outfit Pairings
+- 推荐 · Gift Guides
+- 职场 · Work Styling
+
+**Strong copy + structure; image story needs user or curated RV catalog:**
+
+- 旅行 · Styled Travel / Destination
+- 家居 · Vanity / Jewelry Storage
+
+**Outside scope (push back honestly):**
+
+- 游戏 · Game
+- 影视 · Film & TV (accept only as 穿搭 / 推荐 crossover)
+- 彩妆 · Makeup (accept only as jewelry-makeup pairing)
+- 健身 · Fitness
+- 情感 · Atmospheric 氛围感 / dreamcore (accept only anchored emotional angles)
+- 穿搭 · Daily OOTD full-body shots
+- 美食 · Food (accept only tablescape / gold cutlery crossover)
 - Any post requiring high-saturation Y2K / 千禧辣妹 / dolly / kawaii decoration vocabulary
 - Pure photography showcase posts where the image is the entire product
 
-Be explicit with the user when their request lands in the "outside scope" bucket. Do not promise a result the system was not designed to make.
+**Be explicit with the user when their request lands in the "outside scope" bucket. Do not promise a result the system was not designed to make.** When in doubt, reframe the brief to the nearest in-scope category rather than forcing it into the wrong one — RV's brand consistency depends on every card laddering to one of the 5 content pillars.

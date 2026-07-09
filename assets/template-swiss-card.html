@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-accent="ikb">
+<html lang="zh-CN" data-accent="rv-gold">
 <head>
   <meta charset="utf-8">
   <title>[必填] 替换为社交卡组标题 · Social Card Set</title>
@@ -10,60 +10,65 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     /* =========================================================
-       Swiss International — Social Card Seed Template
+         Rare Visual — Swiss International — Social Card Seed
        ---------------------------------------------------------
-       Three boards built in one HTML:
-         .poster.xhs      1080×1440  (3:4   小红书)
-         .poster.square   1080×1080  (1:1   微信方封面)
-         .poster.wide     2100× 900  (21:9  微信主封面)
-         .pair-preview                       21:9 + 1:1 配对预览
+         Forked from guizang-social-card-skill v0.15 (AGPL-3.0).
+         Rebranded for Rare Visual brand voice.
+           rarevisual.com · "Handcrafted accessories that turn
+           everyday outfits into something intentional."
 
-       Accent switching via <html data-accent="…">:
-         ikb (Klein Blue) | lemon-yellow | lemon-green | safety-orange
+         Three boards built in one HTML:
+           .poster.xhs      1080×1440  (3:4   小红书)
+           .poster.square   1080×1080  (1:1   微信方封面)
+           .poster.wide     2100× 900  (21:9  微信主封面)
+           .pair-preview                       21:9 + 1:1 配对预览
 
-       Fill posters where marked <!-- POSTERS_HERE -->.
-       Each poster carries one Layout Recipe (S01-S12) from
-       references/layout-recipes.md.
-       ========================================================= */
+         Accent switching via <html data-accent="…">:
+           rv-gold (default) | honey | sage | brick
 
-    /* ---------- 1. Accent palettes (4 mutually exclusive) ---------- */
+         Fill posters where marked <!-- POSTERS_HERE -->.
+         Each poster carries one Layout Recipe (S01-S12) from
+         references/layout-recipes.md.
+         ========================================================= */
+
+    /* ---------- 1. Accent palettes (4 mutually exclusive, RV palette) ---------- */
     :root,
-    [data-accent="ikb"] {
-      --paper: #fafaf8;
-      --ink: #0a0a0a;
-      --grey-1: #f0f0ee;
-      --grey-2: #d4d4d2;
-      --grey-3: #737373;
-      --accent: #002FA7;
+    [data-accent="rv-gold"] {
+      --paper: #faf6ee;
+      --ink: #1a1612;
+      --grey-1: #f0e9da;
+      --grey-2: #d8cfba;
+      --grey-3: #80766a;
+      --accent: #b8924a;     /* RV gold — same as warm-brass Editorial accent */
       --accent-on: #ffffff;
-    }
-    [data-accent="lemon-yellow"] {
-      --paper: #fafaf8;
-      --ink: #0a0a0a;
-      --grey-1: #f0f0ee;
-      --grey-2: #d4d4d2;
-      --grey-3: #737373;
-      --accent: #FFD500;
-      --accent-on: #0a0a0a;
-    }
-    [data-accent="lemon-green"] {
-      --paper: #fafaf8;
-      --ink: #0a0a0a;
-      --grey-1: #f0f0ee;
-      --grey-2: #d4d4d2;
-      --grey-3: #737373;
-      --accent: #C5E803;
-      --accent-on: #0a0a0a;
-    }
-    [data-accent="safety-orange"] {
-      --paper: #fafaf8;
-      --ink: #0a0a0a;
-      --grey-1: #f0f0ee;
-      --grey-2: #d4d4d2;
-      --grey-3: #737373;
-      --accent: #FF6B35;
+        }
+    [data-accent="honey"] {
+      --paper: #faf6ee;
+      --ink: #1a1612;
+      --grey-1: #f0e9da;
+      --grey-2: #d8cfba;
+      --grey-3: #80766a;
+      --accent: #e8b54d;     /* honey-gold — softer than neon yellow */
+      --accent-on: #1a1612;
+        }
+    [data-accent="sage"] {
+      --paper: #faf6ee;
+      --ink: #1a1612;
+      --grey-1: #f0e9da;
+      --grey-2: #d8cfba;
+      --grey-3: #80766a;
+      --accent: #8aa178;     /* sage green — semi-precious moss */
       --accent-on: #ffffff;
-    }
+        }
+    [data-accent="brick"] {
+      --paper: #faf6ee;
+      --ink: #1a1612;
+      --grey-1: #f0e9da;
+      --grey-2: #d8cfba;
+      --grey-3: #80766a;
+      --accent: #b85542;     /* terracotta brick — warm, not industrial */
+      --accent-on: #ffffff;
+        }
 
     /* ---------- 2. Typography stack ---------- */
     :root {
@@ -413,10 +418,10 @@
 
     /* asset backgrounds — ported from PPT skill, real texture for screenshot wells.
        Use ONLY when current accent matches the asset's accent (don't mix oranges and IKB). */
-    .frame-shot.bg-asset-ikb-dot          { background: #0c1a3a url("../assets/screenshot-backgrounds/style-b/ikb-dot-gradient.webp")       center/cover no-repeat; }
-    .frame-shot.bg-asset-lemon-green-dot  { background: #d6e08a url("../assets/screenshot-backgrounds/style-b/lemon-green-dot-shadow.webp") center/cover no-repeat; }
-    .frame-shot.bg-asset-lemon-grid       { background: #e6e9b8 url("../assets/screenshot-backgrounds/style-b/lemon-grid.webp")             center/cover no-repeat; }
-    .frame-shot.bg-asset-safety-orange    { background: #ff5b1f url("../assets/screenshot-backgrounds/style-b/safety-orange-halftone.webp") center/cover no-repeat; }
+    .frame-shot.bg-asset-rv-gold-dot          { background: #0c1a3a url("../assets/screenshot-backgrounds/style-b/rv-gold-dot.webp")       center/cover no-repeat; }
+    .frame-shot.bg-asset-sage-dot  { background: #d6e08a url("../assets/screenshot-backgrounds/style-b/sage-dot-shadow.webp") center/cover no-repeat; }
+    .frame-shot.bg-asset-honey-grid       { background: #e6e9b8 url("../assets/screenshot-backgrounds/style-b/honey-grid.webp")             center/cover no-repeat; }
+    .frame-shot.bg-asset-brick    { background: #ff5b1f url("../assets/screenshot-backgrounds/style-b/brick-halftone.webp") center/cover no-repeat; }
 
     .frame-shot.inset-none > img,
     .frame-shot.inset-none > .shot-body { padding: 0; }
@@ -880,7 +885,7 @@
 <body>
   <!-- ACCENT_OVERRIDE
        Change <html data-accent="…"> above to:
-       ikb | lemon-yellow | lemon-green | safety-orange
+       ikb | honey | sage | brick
        One deck — one accent. Never combine.
   -->
   <main class="sheet">

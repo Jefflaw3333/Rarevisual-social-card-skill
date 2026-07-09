@@ -1,15 +1,24 @@
 {
-  "name": "guizang-social-card-skill",
-  "version": "1.0.0",
-  "description": "",
+  "name": "rarevisual-social-card-skill",
+  "version": "1.0.0-rv.1",
+  "description": "Rare Visual branded social card generator. Fork of guizang-social-card-skill v0.15 (AGPL-3.0) with warm-brass / rv-gold palette retuned for Rare Visual (rarevisual.com).",
   "main": "index.js",
   "scripts": {
     "test:docs": "node scripts/check-skill-docs.mjs",
     "validate": "node validate-social-deck.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "rarevisual",
+    "social-cards",
+    "xiaohongshu",
+    "rednote",
+    "wechat",
+    "live-photo",
+    "agent-skill",
+    "handcrafted-accessories"
+  ],
+  "author": "Rare Visual Team (fork of op7418/guizang-social-card-skill)",
+  "license": "AGPL-3.0",
   "dependencies": {
     "playwright": "^1.60.0"
   }

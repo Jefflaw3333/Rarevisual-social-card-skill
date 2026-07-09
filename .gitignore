@@ -1,6 +1,7 @@
 # Local test workspace — demos, screenshots, downloaded assets, debug scripts.
 # Skill iterates only on SKILL.md / references/ / assets/ / agents/ / validate.
 local-tests/
+rvj-local-tests/
 outputs/
 
 # Guard against accidental task artifacts created in the skill root.

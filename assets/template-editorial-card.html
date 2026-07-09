@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="ink-classic">
+<html lang="zh-CN" data-theme="warm-brass">
 <head>
   <meta charset="utf-8">
   <title>[必填] 替换为社交卡组标题 · Social Card Set</title>
@@ -9,8 +9,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <style>
     /* =========================================================
-       Editorial Magazine × E-ink — Social Card Seed Template
-       ---------------------------------------------------------
+       Rare Visual — Editorial Magazine × E-ink — Social Card Seed
+     ---------------------------------------------------------
+       Forked from guizang-social-card-skill v0.15 (AGPL-3.0).
+       Rebranded for Rare Visual brand voice.
+         rarevisual.com · "Handcrafted accessories that turn
+         everyday outfits into something intentional."
+
        Three boards built in one HTML:
          .poster.xhs      1080×1440  (3:4   小红书)
          .poster.square   1080×1080  (1:1   微信方封面)
@@ -18,88 +23,89 @@
          .pair-preview                       21:9 + 1:1 配对预览
 
        Theme switching via <html data-theme="…">:
-         ink-classic | indigo-porcelain | forest-ink | kraft-paper | dune | midnight-ink
+         warm-brass (default) | burnished-brass | stone-blue |
+         olive-stone | ivory | midnight-brass
 
        Fill posters where marked <!-- POSTERS_HERE -->.
        Each poster carries one Layout Recipe (M01-M15) from
        references/layout-recipes.md.
-       ========================================================= */
+         ========================================================= */
 
-    /* ---------- 1. Theme tokens ---------- */
+    /* ---------- 1. Theme tokens (Rare Visual palette) ---------- */
     :root,
-    [data-theme="ink-classic"] {
-      --paper:     #f3f0e8;
-      --paper-2:   #ebe6da;
-      --ink:       #0a0a0b;
-      --muted:     #68625a;
-      --line:      rgba(10,10,11,.22);
-      --accent:    #111111;
-      --accent-soft: #d8d2c6;
-      --ink-rgb: 10,10,11;
-      --paper-rgb: 243,240,232;
-      --accent-rgb: 17,17,17;
+    [data-theme="warm-brass"] {
+      --paper:     #f5efe4;
+      --paper-2:   #ebe1cf;
+      --ink:       #2a2018;
+      --muted:     #7a6a58;
+      --line:      rgba(42,32,24,.22);
+      --accent:    #b8924a;     /* RV gold — solid brass */
+      --accent-soft: #d9c19a;
+      --ink-rgb: 42,32,24;
+      --paper-rgb: 245,239,228;
+      --accent-rgb: 184,146,74;
     }
-    [data-theme="indigo-porcelain"] {
+    [data-theme="burnished-brass"] {
+      --paper:     #ece1c8;
+      --paper-2:   #ddcfb0;
+      --ink:       #1f1610;
+      --muted:     #6c5a44;
+      --line:      rgba(31,22,16,.24);
+      --accent:    #8f6a2e;     /* deeper brass — patina-aged */
+      --accent-soft: #c7a87a;
+      --ink-rgb: 31,22,16;
+      --paper-rgb: 236,225,200;
+      --accent-rgb: 143,106,46;
+    }
+    [data-theme="stone-blue"] {
       --paper:     #f2f4f5;
       --paper-2:   #e5ebef;
-      --ink:       #0a1f3d;
+      --ink:       #0e1f33;
       --muted:     #5f6d78;
-      --line:      rgba(10,31,61,.20);
+      --line:      rgba(14,31,51,.20);
       --accent:    #315d93;
       --accent-soft: #d7e1ec;
-      --ink-rgb: 10,31,61;
+      --ink-rgb: 14,31,51;
       --paper-rgb: 242,244,245;
       --accent-rgb: 49,93,147;
     }
-    [data-theme="forest-ink"] {
-      --paper:     #f5f1e8;
-      --paper-2:   #e8dfcf;
-      --ink:       #16251b;
+    [data-theme="olive-stone"] {
+      --paper:     #f1ede0;
+      --paper-2:   #e3dccc;
+      --ink:       #1f2a1a;
       --muted:     #5d665d;
-      --line:      rgba(22,37,27,.22);
-      --accent:    #2e6b4f;
-      --accent-soft: #d4dfd2;
-      --ink-rgb: 22,37,27;
-      --paper-rgb: 245,241,232;
-      --accent-rgb: 46,107,79;
+      --line:      rgba(31,42,26,.22);
+      --accent:    #6b7f4a;     /* muted olive — semi-precious moss */
+      --accent-soft: #c8d2b5;
+      --ink-rgb: 31,42,26;
+      --paper-rgb: 241,237,224;
+      --accent-rgb: 107,127,74;
     }
-    [data-theme="kraft-paper"] {
-      --paper:     #eedfc7;
-      --paper-2:   #dfc9a8;
-      --ink:       #2a1e13;
-      --muted:     #755f49;
-      --line:      rgba(42,30,19,.24);
-      --accent:    #9b5a2e;
-      --accent-soft: #d5b58f;
-      --ink-rgb: 42,30,19;
-      --paper-rgb: 238,223,199;
-      --accent-rgb: 155,90,46;
+    [data-theme="ivory"] {
+      --paper:     #faf6ee;
+      --paper-2:   #f0e9da;
+      --ink:       #1a1612;
+      --muted:     #80766a;
+      --line:      rgba(26,22,18,.20);
+      --accent:    #c3a263;     /* softer brass — sand-blasted */
+      --accent-soft: #e3d4b3;
+      --ink-rgb: 26,22,18;
+      --paper-rgb: 250,246,238;
+      --accent-rgb: 195,162,99;
     }
-    [data-theme="dune"] {
-      --paper:     #f0e6d2;
-      --paper-2:   #ded0b7;
-      --ink:       #1f1a14;
-      --muted:     #6f6557;
-      --line:      rgba(31,26,20,.22);
-      --accent:    #8f7650;
-      --accent-soft: #d4c2a4;
-      --ink-rgb: 31,26,20;
-      --paper-rgb: 240,230,210;
-      --accent-rgb: 143,118,80;
-    }
-    /* Midnight Ink — the ONLY official dark Editorial palette.
-       Use for game key art, night scenes, dark photography, cinematic covers.
-       Do not improvise other dark backgrounds. */
-    [data-theme="midnight-ink"] {
-      --paper:     #0e0d0c;
-      --paper-2:   #1a1714;
+    /* Midnight Brass — the ONLY official dark Editorial palette (RV).
+           Use for night photography, candle-lit gifting, jewelry on dark velvet.
+           Do not improvise other dark backgrounds. */
+    [data-theme="midnight-brass"] {
+      --paper:     #14110d;
+      --paper-2:   #1f1a13;
       --ink:       #ece2cf;
       --muted:     #9a8c75;
       --line:      rgba(236,226,207,.22);
-      --accent:    #d4a04a;
+      --accent:    #d4a04a;     /* gilt brass — gold highlight */
       --accent-soft: #3a2a14;
       --ink-rgb: 236,226,207;
-      --paper-rgb: 14,13,12;
+      --paper-rgb: 20,17,13;
       --accent-rgb: 212,160,74;
     }
 
@@ -178,12 +184,12 @@
     }
     /* Midnight Ink — flip grain to screen-mode warm specks, paper-wash to
        gilt + shadow vignette. Light-paper math doesn't carry over. */
-    [data-theme="midnight-ink"] .grain {
+    [data-theme="midnight-brass"] .grain {
       opacity: .26;
       mix-blend-mode: screen;
       background-image: radial-gradient(rgba(255,244,214,.10) 1px, transparent 1px);
     }
-    [data-theme="midnight-ink"] .paper-wash {
+    [data-theme="midnight-brass"] .paper-wash {
       background:
         radial-gradient(80% 50% at 28% 16%, rgba(212,160,74,.12), transparent 64%),
         radial-gradient(70% 60% at 80% 86%, rgba(60,40,20,.20), transparent 72%),
@@ -362,7 +368,7 @@
       display: block;
     }
     .frame-img.fit-contain img { object-fit: contain; }
-    [data-theme="midnight-ink"] .frame-img {
+    [data-theme="midnight-brass"] .frame-img {
       background: #18120f;
       box-shadow: 0 0 0 1px rgba(236,226,207,.10);
     }
@@ -422,11 +428,11 @@
 
     /* asset backgrounds — ported from PPT skill, real texture for screenshot wells */
     /* path is relative to the deck's index.html — keep seed and final deck in same dir, or override */
-    .frame-shot.bg-asset-dune             { background: #d8c9a8 url("../assets/screenshot-backgrounds/style-a/dune.webp")             center/cover no-repeat; }
-    .frame-shot.bg-asset-forest-ink       { background: #1f2a24 url("../assets/screenshot-backgrounds/style-a/forest-ink.webp")       center/cover no-repeat; }
-    .frame-shot.bg-asset-indigo-porcelain { background: #cfd6dd url("../assets/screenshot-backgrounds/style-a/indigo-porcelain.webp") center/cover no-repeat; }
-    .frame-shot.bg-asset-kraft-paper      { background: #c9a983 url("../assets/screenshot-backgrounds/style-a/kraft-paper.webp")      center/cover no-repeat; }
-    .frame-shot.bg-asset-monocle-classic  { background: #e8e1d4 url("../assets/screenshot-backgrounds/style-a/monocle-classic.webp")  center/cover no-repeat; }
+    .frame-shot.bg-asset-burnished-brass             { background: #d8c9a8 url("../assets/screenshot-backgrounds/style-a/burnished-brass.webp")             center/cover no-repeat; }
+    .frame-shot.bg-asset-olive-stone       { background: #1f2a24 url("../assets/screenshot-backgrounds/style-a/olive-stone.webp")       center/cover no-repeat; }
+    .frame-shot.bg-asset-stone-blue { background: #cfd6dd url("../assets/screenshot-backgrounds/style-a/stone-blue.webp") center/cover no-repeat; }
+    .frame-shot.bg-asset-ivory      { background: #c9a983 url("../assets/screenshot-backgrounds/style-a/ivory.webp")      center/cover no-repeat; }
+    .frame-shot.bg-asset-warm-brass  { background: #e8e1d4 url("../assets/screenshot-backgrounds/style-a/warm-brass.webp")  center/cover no-repeat; }
 
     /* padding wraps the inner shot — content gets to "float" on the bg tone */
     .frame-shot.inset-none > img,
@@ -756,7 +762,7 @@
 <body>
   <!-- THEME_OVERRIDE
        Change <html data-theme="…"> above to:
-       ink-classic | indigo-porcelain | forest-ink | kraft-paper | dune | midnight-ink
+       warm-brass | stone-blue | olive-stone | ivory | dune | midnight-brass
   -->
   <main class="sheet">
 
@@ -827,8 +833,8 @@
             accent: accent,
             strength: 0.32,
             frozenTime: 12.5
-          });
-        });
+      });
+    });
       }
       if (document.readyState === 'complete') mountAll();
       else window.addEventListener('load', mountAll);

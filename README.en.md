@@ -1,4 +1,6 @@
-# Guizang Social Card Skill · Xiaohongshu Carousels / WeChat Cover Pairs
+# Rare Visual Social Card Skill · Xiaohongshu Carousels / WeChat Cover Pairs
+
+> **Fork of [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) v0.15** (AGPL-3.0), rebranded for the [Rare Visual](https://rarevisual.com) brand — premium handcrafted accessories, US DTC market.
 
 ![GitHub stars](https://img.shields.io/github/stars/op7418/guizang-social-card-skill?style=flat-square)
 ![License](https://img.shields.io/github/license/op7418/guizang-social-card-skill?style=flat-square)
@@ -10,14 +12,18 @@
 
 [中文 README](./README.md)
 
-An agent skill for Claude Code, Codex, and similar coding-agent environments. It generates **Xiaohongshu / Rednote carousel images**, **Live Photo motion cards**, and **WeChat 21:9 + 1:1 cover pairs** from articles, copy, screenshots, product notes, subtitles, photos, or user-supplied videos.
+An agent skill for Hermes Agent, Claude Code, Codex, and similar coding-agent environments. It generates **Xiaohongshu / Rednote carousel images**, **Live Photo motion cards**, and **WeChat 21:9 + 1:1 cover pairs** for Rare Visual — from articles, copy, screenshots, product notes, subtitles, photos, or user-supplied videos.
 
-Two visual systems share one workflow:
+The visual workflow, 28 layout skeletons, 9-rule Playwright validator, and production pipeline are inherited from the upstream Guizang skill. **The palette, copy vocabulary, and category routing have been retuned for the Rare Visual brand voice**: *intentional, warm, grounded, discerning, effortless*. Warm brass and stone-blue replace the original Guizang ink-blue and pure-neutral system.
 
-- **Editorial**. Restrained layouts in the spirit of *Monocle* / *Kinfolk* / *Cereal*. Best for storytelling, lifestyle, travel, reading, film, and personal observation.
-- **Swiss International**. Grid-first, single anchor color, sharp hairlines, extreme type contrast. Best for product reviews, data, frameworks, tutorials, and AI tools.
+Two visual systems share one workflow, tuned for Rare Visual's brand voice:
 
-> Sister project to [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill). Shared visual language, separate maintenance. PPT solves "horizontal swipe talks"; this one solves "static feed images."
+- **Editorial Magazine × E-ink** — Restrained magazine layouts (Monocle / Kinfolk / Cereal lineage). Best for product photography, behind-the-scenes craftsmanship, gift guides, founder essays, and travel/lifestyle styling. *Rare Visual default theme: `warm-brass`.*
+- **Swiss International** — Grid-first, single anchor color, sharp hairlines, extreme type contrast. Best for material education, gift roundups, FAQ posts, customer testimonial matrices, and review recap carousels. *Rare Visual default accent: `rv-gold`.*
+
+The default RV palette replaces Guizang's pure-neutral ink-blue with **warm brass** (`#b8924a`) — solid brass tone, evoking gold-filled and brass jewelry — and the paper base shifts from cool grey-paper to warm cream-paper.
+
+> Visual lineage: this skill is a fork of [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) v0.15 (AGPL-3.0). Sister project: [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill) solves "horizontal swipe talks"; this skill solves "static feed images." Brand retuning is by the Rare Visual team — palette, copy vocabulary, and category routing. Visual workflow is upstream.
 
 ![Guizang Social Card Skill preview](https://github.com/user-attachments/assets/d370abcc-1fc4-4de1-903a-09020a6556ce)
 
