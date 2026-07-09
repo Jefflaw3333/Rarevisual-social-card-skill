@@ -1,3 +1,15 @@
+# Hermes Agent Fork — Rare Visual rebrand (2026-07-09)
+
+> **Fork lineage.** This document is the original Guizang handover (op7418 upstream, AGPL-3.0). It is preserved here as historical context. **The active skill is rebranded to Rare Visual** — see `CHANGELOG.md` for the migration table.
+>
+> **Active palette (RV fork)**:
+> - Editorial: `warm-brass` (default) | `burnished-brass` | `stone-blue` | `olive-stone` | `ivory` | `midnight-brass`
+> - Swiss: `rv-gold` (default) | `honey` | `sage` | `brick`
+>
+> Historical Guizang palette names (ink-classic, indigo-porcelain, forest-ink, kraft-paper, midnight-ink, ikb, lemon-yellow, lemon-green, safety-orange) are still mentioned in this document as the original Guizang upstream history. For the active skill, use the RV palette names.
+
+---
+
 # Handoff — guizang-social-card-skill
 
 最后更新：2026-07-01 · 版本：v0.15（Live Photo 生产规则：3s/5s 平台限制、拼图版式、长视频处理、发布提醒、可见文案与不自造规则）
