@@ -580,7 +580,7 @@ Structure:
 HTML skeleton (21:9, the natural format for this recipe):
 
 ```html
-<section class="poster wide" id="wechat-21x9-hero" data-accent="ikb">
+<section class="poster wide" id="wechat-21x9-hero" data-accent="rv-gold">
   <div class="content stack gap-7">
     <div class="chrome-min">
       <span class="t-cat">Release · 产品</span>
@@ -628,7 +628,7 @@ Structure:
 HTML skeleton (3:4 — template auto-collapses to 2 columns):
 
 ```html
-<section class="poster xhs" id="xhs-data" data-accent="lemon-yellow">
+<section class="poster xhs" id="xhs-data" data-accent="honey">
   <div class="content stack gap-7">
     <p class="t-cat">Data · 半年增长</p>
     <h2 class="h-xl">六个月,四组数字</h2>
@@ -673,7 +673,7 @@ Structure:
 HTML skeleton (3:4):
 
 ```html
-<section class="poster xhs" id="xhs-rank" data-accent="ikb">
+<section class="poster xhs" id="xhs-rank" data-accent="rv-gold">
   <div class="content stack gap-7">
     <p class="t-cat">Ranking · TOP 6</p>
     <h2 class="h-xl">本月最受欢迎的工具</h2>
@@ -728,7 +728,7 @@ Structure:
 HTML skeleton (3:4):
 
 ```html
-<section class="poster xhs" id="xhs-spend" data-accent="safety-orange">
+<section class="poster xhs" id="xhs-spend" data-accent="brick">
   <div class="content stack gap-7">
     <p class="t-cat">Spend · 五月账单</p>
     <h2 class="h-xl">这个月我把钱花在哪</h2>
@@ -782,7 +782,7 @@ Structure:
 HTML skeleton (3:4 — matrix collapses to 2 columns):
 
 ```html
-<section class="poster xhs" id="xhs-matrix" data-accent="lemon-green">
+<section class="poster xhs" id="xhs-matrix" data-accent="sage">
   <div class="content stack gap-7">
     <p class="t-cat">Capabilities · 能力清单</p>
     <h2 class="h-xl">一个 Agent,十二件事</h2>

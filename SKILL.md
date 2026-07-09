@@ -1,11 +1,15 @@
 ---
-name: guizang-social-card-skill
-description: Generate Guizang-style social card image sets, Live Photo motion cards, material-first Live Photo puzzle layouts, triple Live Photo collages, long-video-to-Live-Photo treatments, and WeChat official account cover pairs from articles, scripts, screenshots, product notes, subtitles, photos, or user-supplied videos. Use when the user asks for 小红书图文, Rednote/Xiaohongshu images, social cards, carousel images, 3:4 covers, Live Photo, 实况照片, 单视频实况拼图, 二宫格实况拼图, 三连实况拼图, 四宫格实况拼图, 微信公众号封面, WeChat 21:9 + 1:1 covers, Swiss Style, or magazine-style social images.
+name: rarevisual-social-card-skill
+description: Generate Rare Visual (rarevisual.com) branded social card image sets, Live Photo motion cards, material-first Live Photo puzzle layouts, triple Live Photo collages, long-video-to-Live-Photo treatments, and WeChat official account cover pairs from articles, scripts, screenshots, product notes, subtitles, photos, or user-supplied videos. Use when the user asks for 小红书图文, Rednote/Xiaohongshu images, social cards, carousel images, 3:4 covers, Live Photo, 实况照片, 单视频实况拼图, 二宫格实况拼图, 三连实况拼图, 四宫格实况拼图, 微信公众号封面, WeChat 21:9 + 1:1 covers, Swiss Style, or magazine-style social images.
 ---
 
-# Guizang Social Card Skill
+# Rare Visual Social Card Skill
 
-Create polished social card packages for Xiaohongshu/Rednote, WeChat Official Account, article covers, and platform thumbnails.
+Create polished, brand-aligned social card packages for Rare Visual — Xiaohongshu/Rednote carousels, WeChat Official Account covers, gift guides, behind-the-scenes craftsmanship posts, and platform thumbnails.
+
+> **Fork lineage.** This skill is forked from [`guizang-social-card-skill`](https://github.com/op7418/guizang-social-card-skill) v0.15 under AGPL-3.0. The visual workflow, 28 layout skeletons, 9-rule Playwright validator, and production pipeline are inherited. The palette, copy vocabulary, and category routing have been retuned for the Rare Visual brand (rarevisual.com).
+>
+> See `HANDOFF.md` and `PRODUCT.md` for full lineage, decisions, and roadmap.
 
 This skill is self-contained. It borrows visual principles from the Guizang PPT style system, but it must not edit the original PPT skill, its templates, or its references. If the original PPT skill is available, you may read it for reference only.
 
@@ -194,8 +198,8 @@ The seed already wires up: font loading, theme tokens, all three poster sizes (`
 
 Set the theme/accent on the `<html>` element:
 
-- Editorial: `<html data-theme="ink-classic | indigo-porcelain | forest-ink | kraft-paper | dune | midnight-ink">`.
-- Swiss: `<html data-accent="ikb | lemon-yellow | lemon-green | safety-orange">`.
+- Editorial: `<html data-theme="warm-brass | burnished-brass | stone-blue | olive-stone | ivory | midnight-brass">`.
+- Swiss: `<html data-accent="rv-gold | honey | sage | brick">`.
 
 Replace the single placeholder poster after `<!-- POSTERS_HERE -->` with one `<section class="poster ...">` block per page, each carrying the HTML skeleton from a chosen Layout Recipe (M01-M16 for Editorial, S01-S12 for Swiss). Never load the wrong template's class system: Editorial recipes assume serif display + ledger/marginalia/pipeline-v; Swiss recipes assume Inter + card-fills + matrix/h-bar/kpi-tower. Mixing them silently breaks the layout.
 

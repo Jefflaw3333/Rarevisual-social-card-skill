@@ -1,4 +1,6 @@
-# Guizang Social Card Skill · 小红书图文 / 公众号封面对
+# Rare Visual Social Card Skill · 小红书图文 / 公众号封面对
+
+> **Fork 自 [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) v0.15** (AGPL-3.0),为 [Rare Visual](https://rarevisual.com) 品牌重新调色板、调词库、调品类路由。Rare Visual 是面向美国 25-45 岁女性的 premium 手工艺饰品 DTC 品牌。
 
 ![GitHub stars](https://img.shields.io/github/stars/op7418/guizang-social-card-skill?style=flat-square)
 ![License](https://img.shields.io/github/license/op7418/guizang-social-card-skill?style=flat-square)
@@ -10,14 +12,18 @@
 
 [English README](./README.en.md)
 
-一个适配 Claude Code / Codex 等 Agent 环境的图文卡片技能,用于从文章、文案、截图、产品笔记、字幕、照片或用户视频生成**小红书 / Rednote 图文组图**、**Live Photo 动态卡**与**公众号 21:9 + 1:1 封面对**。
+一个适配 Hermes Agent / Claude Code / Codex 等 Agent 环境的图文卡片技能,用于从文章、文案、截图、产品笔记、字幕、照片或用户视频为 Rare Visual 生成**小红书 / Rednote 图文组图**、**Live Photo 动态卡**与**公众号 21:9 + 1:1 封面对**。
 
-内置两套视觉系统,共用一份图文工作流:
+视觉工作流、28 个 layout 骨架、9 条 Playwright 校验规则、生产管线全部继承自上游 Guizang。**色板、词库、品类路由**已按 Rare Visual 品牌调性(*intentional, warm, grounded, discerning, effortless*)*重新调整:把 Guizang 的 ink-blue 中性冷淡换成 warm brass 暖黄铜,把 paper base 从冷灰换成暖奶油。**
 
-- **电子杂志风(Editorial)**。像 *Monocle* / *Kinfolk* / *Cereal* 那样克制的版面,适合叙事、生活方式、旅行、阅读、影视、个人观察。
-- **瑞士国际主义(Swiss)**。网格、单一锚点色、直角发丝线、极致字号对比,适合产品测评、数据、方法论、教程、AI 工具。
+两套视觉系统,共用一份工作流,为 Rare Visual 品牌调性调整:
 
-> 这个 Skill 是 [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill) 的姊妹项目,共享美学语言但独立维护。PPT 解决"横向翻页演讲",这里解决"静态信息流图文"。
+- **电子杂志风 × E-ink (Editorial)** — 像 *Monocle* / *Kinfolk* / *Cereal* 那样克制的版面。适合产品摄影、工艺幕后、礼盒指南、创始人随笔、旅行/生活造型。*Rare Visual 默认主题: `warm-brass`(暖黄铜)。*
+- **瑞士国际主义 (Swiss)** — 网格、单一锚点色、直角发丝线、极致字号对比。适合材质科普、礼盒攻略、FAQ、客户证言矩阵、复盘轮播。*Rare Visual 默认锚色: `rv-gold`(古铜金)。*
+
+默认 RV 调色板把 Guizang 的纯冷灰 + ink-blue 换成 **warm brass**(`#b8924a`,实心黄铜色调,呼应金箔+黄铜饰品),paper base 也从冷灰变成暖奶油。
+
+> 视觉谱系:本 skill fork 自 [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) v0.15 (AGPL-3.0)。姊妹项目 [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill) 解决"横向翻页演讲";本 skill 解决"静态信息流图文"。品牌重调由 Rare Visual 团队完成(色板、词库、品类路由),视觉工作流继承上游。
 
 ![Guizang Social Card Skill 效果展示](https://github.com/user-attachments/assets/d370abcc-1fc4-4de1-903a-09020a6556ce)
 

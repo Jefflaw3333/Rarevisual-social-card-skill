@@ -85,24 +85,24 @@ Editorial assets (`assets/screenshot-backgrounds/style-a/`):
 
 | Class                       | Tone               | Best for                                          |
 | --------------------------- | ------------------ | ------------------------------------------------- |
-| `bg-asset-dune`             | Warm sand          | Travel / outdoor app shots, lifestyle products    |
-| `bg-asset-forest-ink`       | Deep forest green  | Dark-mode UI on Editorial — pairs with `ink-classic` |
-| `bg-asset-indigo-porcelain` | Cool porcelain     | Reading / writing apps, design tools              |
-| `bg-asset-kraft-paper`      | Kraft brown        | Notes / journaling / handwritten apps             |
-| `bg-asset-monocle-classic`  | Cream paper        | Default warm hero — most magazine-like            |
+| `bg-asset-burnished-brass`             | Warm sand          | Travel / outdoor app shots, lifestyle products    |
+| `bg-asset-olive-stone`       | Muted olive        | Outdoor / natural materials, moss / sage tones       |
+| `bg-asset-stone-blue` | Cool porcelain     | Reading / writing apps, design tools, calm analytical |
+| `bg-asset-ivory`      | Warm cream         | Ecommerce / product line-ups, gift-roundup cards |
+| `bg-asset-warm-brass`  | Warm cream paper   | Default warm hero — RV signature, most magazine-like |
 
-Swiss assets (`assets/screenshot-backgrounds/style-b/`):
+Swiss assets (`assets/screenshot-backgrounds/style-b/`) — RV palette:
 
-| Class                      | Accent            | Use only when current accent matches             |
-| -------------------------- | ----------------- | ------------------------------------------------ |
-| `bg-asset-ikb-dot`         | IKB Klein Blue    | `data-accent="ikb"` decks only                   |
-| `bg-asset-lemon-green-dot` | Lemon-green       | `data-accent="lemon-green"` decks only           |
-| `bg-asset-lemon-grid`      | Lemon-yellow      | `data-accent="lemon"` decks only                 |
-| `bg-asset-safety-orange`   | Safety orange     | `data-accent="safety-orange"` decks only         |
+| Class                      | Accent          | Use only when current accent matches             |
+| -------------------------- | --------------- | ------------------------------------------------ |
+| `bg-asset-rv-gold-dot`     | RV gold         | `data-accent="rv-gold"` decks only — default    |
+| `bg-asset-sage-dot`        | Sage green      | `data-accent="sage"` decks only — semi-precious |
+| `bg-asset-honey-grid`      | Honey-gold      | `data-accent="honey"` decks only — Q4 gifting  |
+| `bg-asset-brick-halftone`  | Brick terracotta| `data-accent="brick"` decks only — limited stock |
 
 **Rules of thumb**
 
-- Don't mix accents — a `data-accent="ikb"` deck must not pull a `bg-asset-safety-orange` stage.
+- Don't mix accents — a `data-accent="rv-gold"` deck must not pull a `bg-asset-brick-halftone` stage.
 - Asset backgrounds already carry texture; don't stack `shadow-ed` on top (the `1px` outline will read as a SaaS frame). Use `shadow-soft` or `shadow-none`.
 - Decide once per deck whether asset stages are part of the visual identity — don't sprinkle one asset background into a deck of solid stages, it looks like a sample card.
 - These assets are crop-safe at 16:10 and 16:9. For tall `r-3x4` or square `r-1x1` slots, prefer solid `bg-*` — the texture pattern can read awkwardly when over-cropped.
@@ -179,12 +179,17 @@ Two recipes that cover 80% of cases.
 
 **Editorial hero with real texture** — magazine-grade stage:
 ```
-.frame-shot.r-16x10.corners-sm.shadow-soft.bg-asset-monocle-classic.inset-bal
+.frame-shot.r-16x10.corners-sm.shadow-soft.bg-asset-warm-brass.inset-bal
 ```
 
 **Swiss hero with brand-aligned stage** — only when accent matches asset:
 ```
-.frame-shot.r-16x10.corners-sq.shadow-none.bg-asset-ikb-dot.inset-bal
+.frame-shot.r-16x10.corners-sq.shadow-none.bg-asset-rv-gold-dot.inset-bal
+```
+
+**Editorial hero with RV signature texture** — most magazine-like stage:
+```
+.frame-shot.r-16x10.corners-sm.shadow-soft.bg-asset-warm-brass.inset-bal
 ```
 
 For comparison shots (before / after), use **the same parameters** on both — different treatment between cells reads as inconsistency, not contrast.
