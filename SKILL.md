@@ -158,8 +158,8 @@ Do not mix the two visual systems inside the same image set unless the user expl
 
 Then pick one theme:
 
-- Editorial Magazine x E-ink uses one of 6 magazine palettes: Ink Classic, Indigo Porcelain, Forest Ink, Kraft Paper, Dune, or Midnight Ink (the only dark variant; reserved for game key art / night photography / cinematic covers).
-- Swiss International uses one of 4 accent palettes: IKB Blue, Lemon Yellow, Lemon Green, or Safety Orange.
+- Editorial Magazine x E-ink uses one of 6 magazine palettes: Warm Brass (default), Burnished Brass, Stone Blue, Olive Stone, Ivory, or Midnight Brass (the only dark variant; reserved for candle-lit gifting, dark imagery, and velvet jewelry trays).
+- Swiss International uses one of 4 accent palettes: RV Gold (default), Honey, Sage, or Brick.
 
 Read `references/theme-presets.md` for exact CSS tokens. Do not invent arbitrary colors unless the user has a strict brand requirement.
 
