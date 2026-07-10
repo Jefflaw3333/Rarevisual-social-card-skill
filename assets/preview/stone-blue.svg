@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720">
+  <defs>
+    <pattern id="g3" patternUnits="userSpaceOnUse" width="3" height="3">
+      <circle cx="1" cy="1" r="0.3" fill="rgba(0,0,0,0.03)"/>
+    </pattern>
+  </defs>
+  <rect width="540" height="720" fill="#f2f4f5"/>
+  <rect width="540" height="720" fill="url(#g3)"/>
+  <rect x="48" y="64" width="48" height="6" fill="#315d93"/>
+  <text x="48" y="108" font-family="monospace" font-size="11" letter-spacing="3" fill="#5f6d78">MATERIALS · EDUCATION</text>
+  <text x="48" y="180" font-family="serif" font-size="56" font-weight="500" fill="#0e1f33">Gold-filled</text>
+  <text x="48" y="244" font-family="serif" font-size="56" font-weight="500" fill="#0e1f33">vs plated</text>
+  <text x="48" y="372" font-family="serif" font-size="20" font-style="italic" fill="#5f6d78">100× more gold. Here's why it matters.</text>
+  <text x="48" y="430" font-family="serif" font-size="16" fill="#0e1f33">The cool counterpoint to warm-</text>
+  <text x="48" y="452" font-family="serif" font-size="16" fill="#0e1f33">brass. Use when post needs</text>
+  <text x="48" y="474" font-family="serif" font-size="16" fill="#0e1f33">credibility and clarity.</text>
+  <rect x="48" y="540" width="180" height="44" rx="22" stroke="#315d93" stroke-width="1.5" fill="none"/>
+  <text x="138" y="568" font-family="serif" font-size="14" font-weight="500" text-anchor="middle" fill="#0e1f33">Read the guide</text>
+  <text x="48" y="680" font-family="monospace" font-size="9" letter-spacing="2" fill="#5f6d78">ISSUE · 03 · STONE BLUE</text>
+</svg>

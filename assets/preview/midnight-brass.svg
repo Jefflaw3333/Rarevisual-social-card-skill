@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720">
+  <defs>
+    <radialGradient id="mGlow" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="rgba(212,160,74,0.18)"/>
+      <stop offset="100%" stop-color="rgba(212,160,74,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="540" height="720" fill="#14110d"/>
+  <rect width="540" height="720" fill="url(#mGlow)"/>
+  <rect x="48" y="64" width="48" height="6" fill="#d4a04a"/>
+  <text x="48" y="108" font-family="monospace" font-size="11" letter-spacing="3" fill="#9a8c75">LIMITED · AFTER HOURS</text>
+  <text x="48" y="180" font-family="serif" font-size="48" font-weight="500" fill="#ece2cf">For the</text>
+  <text x="48" y="236" font-family="serif" font-size="48" font-weight="500" fill="#ece2cf">candlelit</text>
+  <text x="48" y="292" font-family="serif" font-size="48" font-weight="500" fill="#ece2cf">unwrap</text>
+  <text x="48" y="356" font-family="serif" font-size="20" font-style="italic" fill="#9a8c75">Dark · gilt brass accent.</text>
+  <text x="48" y="420" font-family="serif" font-size="16" fill="#ece2cf">Use only when source imagery is</text>
+  <text x="48" y="442" font-family="serif" font-size="16" fill="#ece2cf">already dark and warm. Velvet</text>
+  <text x="48" y="464" font-family="serif" font-size="16" fill="#ece2cf">trays · candle-lit moments.</text>
+  <rect x="48" y="540" width="180" height="44" rx="22" stroke="#d4a04a" stroke-width="1.5" fill="none"/>
+  <text x="138" y="568" font-family="serif" font-size="14" font-weight="500" text-anchor="middle" fill="#ece2cf">Shop limited</text>
+  <text x="48" y="680" font-family="monospace" font-size="9" letter-spacing="2" fill="#9a8c75">ISSUE · 06 · MIDNIGHT BRASS</text>
+</svg>

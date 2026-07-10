@@ -27,6 +27,45 @@ The default RV palette replaces Guizang's pure-neutral ink-blue with **warm bras
 
 ![Rare Visual — 10 Theme Style System](docs/theme-guide/theme-guide-en.html)
 
+## 10 Theme Preview
+
+Rare Visual's visual system consists of **6 Editorial magazine-style + 4 Swiss international-style** themes. The full guide (color tokens, typography, rules) is at [`docs/theme-guide/theme-guide-en.html`](docs/theme-guide/theme-guide-en.html).
+
+### Editorial Magazine × E-ink (6 themes)
+
+<table>
+<tr>
+  <td align="center" width="33%"><b>Warm Brass</b> <i>(default)</i><br><code>warm-brass</code><br><br><img src="assets/preview/warm-brass.svg" width="240" alt="warm-brass"/><br><sub>Product photography · gifting covers</sub></td>
+  <td align="center" width="33%"><b>Burnished Brass</b><br><code>burnished-brass</code><br><br><img src="assets/preview/burnished-brass.svg" width="240" alt="burnished-brass"/><br><sub>Collection launches · patina tone</sub></td>
+  <td align="center" width="33%"><b>Stone Blue</b><br><code>stone-blue</code><br><br><img src="assets/preview/stone-blue.svg" width="240" alt="stone-blue"/><br><sub>Material education · credibility</sub></td>
+</tr>
+<tr>
+  <td align="center"><b>Olive Stone</b><br><code>olive-stone</code><br><br><img src="assets/preview/olive-stone.svg" width="240" alt="olive-stone"/><br><sub>Nature · semi-precious stones</sub></td>
+  <td align="center"><b>Ivory</b><br><code>ivory</code><br><br><img src="assets/preview/ivory.svg" width="240" alt="ivory"/><br><sub>Clean ecommerce product grids</sub></td>
+  <td align="center"><b>Midnight Brass</b> <i>(dark)</i><br><code>midnight-brass</code><br><br><img src="assets/preview/midnight-brass.svg" width="240" alt="midnight-brass"/><br><sub>Velvet · candle-lit · limited</sub></td>
+</tr>
+</table>
+
+### Swiss International (4 accents)
+
+<table>
+<tr>
+  <td align="center" width="50%"><b>RV Gold</b> <i>(default)</i><br><code>rv-gold</code><br><br><img src="assets/preview/rv-gold.svg" width="360" alt="rv-gold"/><br><sub>Gift guides · FAQ · reviews</sub></td>
+  <td align="center" width="50%"><b>Honey</b><br><code>honey</code><br><br><img src="assets/preview/honey.svg" width="360" alt="honey"/><br><sub>Q4 gifting · holiday countdowns</sub></td>
+</tr>
+<tr>
+  <td align="center"><b>Sage</b><br><code>sage</code><br><br><img src="assets/preview/sage.svg" width="360" alt="sage"/><br><sub>Eco · semi-precious · spring drops</sub></td>
+  <td align="center"><b>Brick</b><br><code>brick</code><br><br><img src="assets/preview/brick.svg" width="360" alt="brick"/><br><sub>Limited stock · urgent gifting</sub></td>
+</tr>
+</table>
+
+### Defaults
+
+> 80% of content fits **warm-brass** (Editorial default) or **rv-gold** (Swiss default). Reach for these two when in doubt.
+> Full token table, typography, and rules in the [complete style guide](docs/theme-guide/theme-guide-en.html).
+
+---
+
 ## 30-second start
 
 ```bash

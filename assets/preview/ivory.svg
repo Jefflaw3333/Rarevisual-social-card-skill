@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720">
+  <defs>
+    <pattern id="g5" patternUnits="userSpaceOnUse" width="3" height="3">
+      <circle cx="1" cy="1" r="0.2" fill="rgba(0,0,0,0.02)"/>
+    </pattern>
+  </defs>
+  <rect width="540" height="720" fill="#faf6ee"/>
+  <rect width="540" height="720" fill="url(#g5)"/>
+  <rect x="48" y="64" width="48" height="6" fill="#c3a263"/>
+  <text x="48" y="108" font-family="monospace" font-size="11" letter-spacing="3" fill="#80766a">SHOP · THE EDIT</text>
+  <text x="48" y="180" font-family="serif" font-size="50" font-weight="500" fill="#1a1612">5 pieces she'll</text>
+  <text x="48" y="240" font-family="serif" font-size="50" font-weight="500" fill="#1a1612">reach for daily</text>
+  <text x="48" y="356" font-family="serif" font-size="20" font-style="italic" fill="#80766a">Curated · everyday capsule.</text>
+  <text x="48" y="420" font-family="serif" font-size="16" fill="#1a1612">The lightest warm paper in the</text>
+  <text x="48" y="442" font-family="serif" font-size="16" fill="#1a1612">system. Ecommerce product grid</text>
+  <text x="48" y="464" font-family="serif" font-size="16" fill="#1a1612">posts · maximum photo brightness.</text>
+  <rect x="48" y="540" width="180" height="44" rx="22" stroke="#c3a263" stroke-width="1.5" fill="none"/>
+  <text x="138" y="568" font-family="serif" font-size="14" font-weight="500" text-anchor="middle" fill="#1a1612">See the edit</text>
+  <text x="48" y="680" font-family="monospace" font-size="9" letter-spacing="2" fill="#80766a">ISSUE · 05 · IVORY</text>
+</svg>

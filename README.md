@@ -27,6 +27,45 @@
 
 ![Rare Visual Social Card Skill — 10 Theme Style System](docs/theme-guide/theme-guide-zh.html)
 
+## 10 套主题预览
+
+Rare Visual 的视觉系统由 **6 套杂志风 Editorial + 4 套瑞士风 Swiss** 组成。完整指南（色号表 / 排版规范 / 避坑清单）见 [`docs/theme-guide/theme-guide-zh.html`](docs/theme-guide/theme-guide-zh.html)。
+
+### Editorial 杂志风 × E-ink（6 套）
+
+<table>
+<tr>
+  <td align="center" width="33%"><b>暖黄铜</b> <i>(默认)</i><br><code>warm-brass</code><br><br><img src="assets/preview/warm-brass.svg" width="240" alt="warm-brass"/><br><sub>产品摄影 / 礼盒封面</sub></td>
+  <td align="center" width="33%"><b>古铜黄铜</b><br><code>burnished-brass</code><br><br><img src="assets/preview/burnished-brass.svg" width="240" alt="burnished-brass"/><br><sub>系列发布 / 陈年厚重</sub></td>
+  <td align="center" width="33%"><b>瓷青蓝</b><br><code>stone-blue</code><br><br><img src="assets/preview/stone-blue.svg" width="240" alt="stone-blue"/><br><sub>材质科普 / 可信感</sub></td>
+</tr>
+<tr>
+  <td align="center"><b>雾橄榄</b><br><code>olive-stone</code><br><br><img src="assets/preview/olive-stone.svg" width="240" alt="olive-stone"/><br><sub>半宝石 / 自然叙事</sub></td>
+  <td align="center"><b>象牙白</b><br><code>ivory</code><br><br><img src="assets/preview/ivory.svg" width="240" alt="ivory"/><br><sub>电商产品 grid</sub></td>
+  <td align="center"><b>暗夜黄铜</b> <i>(暗调)</i><br><code>midnight-brass</code><br><br><img src="assets/preview/midnight-brass.svg" width="240" alt="midnight-brass"/><br><sub>烛光 / 丝绒 / 限定</sub></td>
+</tr>
+</table>
+
+### Swiss 瑞士国际风（4 套）
+
+<table>
+<tr>
+  <td align="center" width="50%"><b>RV 古铜金</b> <i>(默认)</i><br><code>rv-gold</code><br><br><img src="assets/preview/rv-gold.svg" width="360" alt="rv-gold"/><br><sub>礼盒攻略 / FAQ / 复盘</sub></td>
+  <td align="center" width="50%"><b>蜜金色</b><br><code>honey</code><br><br><img src="assets/preview/honey.svg" width="360" alt="honey"/><br><sub>Q4 礼盒季 / 节日倒计时</sub></td>
+</tr>
+<tr>
+  <td align="center"><b>鼠尾草</b><br><code>sage</code><br><br><img src="assets/preview/sage.svg" width="360" alt="sage"/><br><sub>环保 / 半宝石 / 春款</sub></td>
+  <td align="center"><b>陶土红</b><br><code>brick</code><br><br><img src="assets/preview/brick.svg" width="360" alt="brick"/><br><sub>限量发售 / 紧急提醒</sub></td>
+</tr>
+</table>
+
+### 默认推荐
+
+> 80% 场景用 **warm-brass**（Editorial 默认）或 **rv-gold**（Swiss 默认）。不确定时永远选这两个。
+> 完整 token 表、排版规范、避坑清单见 [完整主题指南](docs/theme-guide/theme-guide-zh.html)。
+
+---
+
 ## 30 秒开始
 
 ```bash
