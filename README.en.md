@@ -25,41 +25,41 @@ The default RV palette replaces Guizang's pure-neutral ink-blue with **warm bras
 
 > Visual lineage: this skill is a fork of [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill) v0.15 (AGPL-3.0). Sister project: [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill) solves "horizontal swipe talks"; this skill solves "static feed images." Brand retuning is by the Rare Visual team — palette, copy vocabulary, and category routing. Visual workflow is upstream.
 
-![Guizang Social Card Skill preview](https://github.com/user-attachments/assets/d370abcc-1fc4-4de1-903a-09020a6556ce)
+![Rare Visual — 10 Theme Style System](docs/theme-guide/theme-guide-en.html)
 
 ## 30-second start
 
 ```bash
-npx skills add https://github.com/op7418/guizang-social-card-skill --skill guizang-social-card-skill
+npx skills add https://github.com/Jefflaw3333/Rarevisual-social-card-skill --skill rarevisual-social-card-skill
 ```
 
 Or paste this to an AI agent with shell access:
 
 ```text
-Install guizang-social-card-skill for me. Clone https://github.com/op7418/guizang-social-card-skill into ~/.claude/skills/guizang-social-card-skill, then verify that SKILL.md, assets/, and references/ exist.
+Install rarevisual-social-card-skill for me. Clone https://github.com/Jefflaw3333/Rarevisual-social-card-skill into ~/.hermes/skills/rarevisual-social-card-skill (or ~/.claude/skills/rarevisual-social-card-skill), then verify that SKILL.md, assets/, and references/ exist.
 ```
 
 If you already installed it, update with:
 
 ```text
-Update guizang-social-card-skill for me. Go to ~/.claude/skills/guizang-social-card-skill, run git pull, then tell me the latest commit.
+Update rarevisual-social-card-skill for me. Go to ~/.hermes/skills/rarevisual-social-card-skill, run git pull, then tell me the latest commit.
 ```
 
-Then ask your agent:
+Then ask your agent (Rare Visual brand-voice prompts):
 
 ```text
-Make me a Swiss-style Xiaohongshu carousel from this article, 5 cards, IKB blue.
+Make me a 5-card Xiaohongshu carousel in warm-brass Editorial style, explaining gold-filled vs gold-plated jewelry.
 ```
 
-Other useful prompts:
+Other useful prompts (Rare Visual brand scenarios):
 
 ```text
-Make me a 3:4 Xiaohongshu set from this product review, with editorial-style titles.
-Turn this article into a WeChat cover pair: 21:9 hero + 1:1 share card, visually consistent.
-I have 3 camping photos — make me an image-led Xiaohongshu carousel.
-Turn this game guide copy into a Xiaohongshu set; pull some game art from Wallhaven.
-I have a coffee video — make it a 5-second Xiaohongshu Live Photo card with text in a quiet zone.
-Turn these three game clips into a triple Live Photo collage with Swiss-style guide copy.
+Make me a Mother's Day gift guide in rv-gold Swiss style — 8 picks grouped by recipient.
+Turn this "5 pieces that cover a workweek" essay into a 6-card ivory Editorial carousel, one outfit per card.
+I have 3 gold-filled necklace product photos — make me a warm-brass Editorial cover + behind-the-scenes craft carousel.
+Turn this 5-second café video into a Live Photo motion card in warm-brass, with text in the lower-left quiet zone.
+Make me a Q4 limited-drop 5-card countdown carousel in honey Swiss style, with "last 8 pieces" urgency framing.
+Make me a gift-buying guide for boyfriends in rv-gold Swiss style — 3 picks × 3 price tiers, Editorial cover, Swiss body.
 ```
 
 ## What you get
@@ -68,7 +68,7 @@ Turn these three game clips into a triple Live Photo collage with Swiss-style gu
 - 📐 **3 canvas sizes**: `.poster.xhs` 1080×1440 (Xiaohongshu 3:4), `.poster.wide` 2100×900 (WeChat 21:9), `.poster.square` 1080×1080 (WeChat 1:1)
 - 🎬 **Live Photo motion cards**: single video, two-grid, three-grid, four-grid, triple collage, and low-cost long-video diagnosis; `5s` for Xiaohongshu, `3s` for WeChat Official Account articles
 - 🧩 **28 layout skeletons**: 16 Editorial (`M01-M16`, including Image-Led Cover, Pipeline, Before/After) + 12 Swiss (`S01-S12`, including KPI Tower, H-Bar Chart, Matrix + Hero)
-- 🎨 **10 theme presets**: 6 Editorial (Ink Classic, Indigo Porcelain, Forest Ink, Kraft Paper, Dune, **Midnight Ink** dark) + 4 Swiss anchor colors (IKB Klein Blue, Lemon, Lemon Green, Safety Orange)
+- 🎨 **10 theme presets**: 6 Editorial (warm-brass · burnished-brass · stone-blue · olive-stone · ivory · **midnight-brass** dark) + 4 Swiss anchor colors (rv-gold · honey · sage · brick)
 - 🖼 **Image sourcing workflow**: user images first; otherwise waterfall through Unsplash → Pexels → Flickr CC → Wallhaven → direct search, downloaded locally with auto-generated `SOURCES.md`
 - 🌫 **WebGL ink-flow background**: editorial hero pages can ship a live ink animation; can be disabled for low-power devices or screenshot mode
 - 🪧 **Text-on-image + subject safety**: full-bleed images require quiet-zone and subject mapping first; add only localized tint when needed, not a default full-canvas mask
@@ -135,13 +135,13 @@ Tiered by "circle of competence" — see [`references/category-cookbook.md`](./r
 | Task | Recommended flow |
 |------|------------------|
 | Long article → Xiaohongshu carousel | Extract core takeaways; Editorial for narrative pacing, Swiss for data breakdowns |
-| Product review / tool wrap-up | Swiss + IKB blue, prefer `S09 KPI Tower` / `S10 H-Bar Chart` |
-| Travel / lifestyle | Editorial + Midnight Ink or Dune, `M16 Image-Led Cover` for full-bleed hero |
+| Product review / tool wrap-up | Swiss + rv-gold, prefer `S09 KPI Tower` / `S10 H-Bar Chart` |
+| Travel / lifestyle | Editorial + midnight-brass or burnished-brass, `M16 Image-Led Cover` for full-bleed hero |
 | WeChat cover pair | Render the same content twice: `.poster.wide` 21:9 + `.poster.square` 1:1, visually consistent |
 | Screenshot tutorial / tool walkthrough | `.frame-shot` + `.device-browser`, prefer Swiss grid base |
-| Game guide / film recap | Editorial + Midnight Ink, pull game art from Wallhaven for full-bleed hero |
+| Game guide / film recap | Editorial + midnight-brass, pull game art from Wallhaven for full-bleed hero |
 | User video → Live Photo | Judge the `3s/5s` information budget first, then choose single video / puzzle / triple collage / long-video diagnosis |
-| Data recap / year in review | Swiss + Lemon or Safety Orange, matrix + ledger combo |
+| Data recap / year in review | Swiss + honey or brick, matrix + ledger combo |
 
 ## Why single-file HTML to PNG
 
@@ -166,7 +166,7 @@ Tiered by "circle of competence" — see [`references/category-cookbook.md`](./r
 ### Option 1: One-line install (recommended)
 
 ```bash
-npx skills add https://github.com/op7418/guizang-social-card-skill --skill guizang-social-card-skill
+npx skills add https://github.com/Jefflaw3333/Rarevisual-social-card-skill --skill rarevisual-social-card-skill
 ```
 
 ### Option 2: Paste this to an AI
@@ -195,7 +195,7 @@ Once installed, Claude Code auto-detects the skill. Trigger phrases:
 - "Make a WeChat 21:9 hero + 1:1 share card"
 - "Generate social cards / magazine-style social cards"
 - "Turn this article into a tutorial carousel"
-- "Make a Swiss-style Xiaohongshu review / IKB-style cards"
+- "Make a Swiss-style Xiaohongshu review / RV-Gold-style cards"
 - "Turn this video into a Xiaohongshu Live Photo / triple Live Photo collage"
 - "Make a 3-second Live Photo for a WeChat Official Account article"
 
@@ -239,25 +239,25 @@ node validate-social-deck.mjs path/to/task-dir
 
 Pick from [`references/theme-presets.md`](./references/theme-presets.md). **Custom hex values are not allowed** — protecting the aesthetic matters more than freedom of choice.
 
-### Editorial (6)
+### Editorial (6) — Rare Visual palette
 
 | Theme | Tones | Best for |
 |-------|-------|----------|
-| 🖋 **Ink Classic** | `#0a0a0b` / `#f1efea` | General default, commercial topics, when in doubt |
-| 🌊 **Indigo Porcelain** | `#0a1f3d` / `#f1f3f5` | Tech, research, AI, technical writing |
-| 🌿 **Forest Ink** | `#1a2e1f` / `#f5f1e8` | Nature, sustainability, outdoors, non-fiction |
-| 🍂 **Kraft Paper** | `#2a1e13` / `#eedfc7` | Nostalgia, humanities, reading, literature |
-| 🌙 **Dune** | `#1f1a14` / `#f0e6d2` | Art, design, creative, fashion |
-| ⚫ **Midnight Ink** | `#0e0d0c` / `#ece2cf` / `#d4a04a` | Game key art / night scenes / cinematic covers / Black Myth · Elden Ring-style dark themes |
+| 🟡 **Warm Brass** | `#f5efe4` / `#b8924a` | Default — product photography, gold-filled and brass close-ups, gifting covers |
+| 🟤 **Burnished Brass** | `#ece1c8` / `#8f6a2e` | Collection launches, "best of" roundups, deeper patina-aged tone |
+| 🔵 **Stone Blue** | `#f2f4f5` / `#315d93` | Material education, FAQ, comparison posts, credibility-focused content |
+| 🟢 **Olive Stone** | `#f1ede0` / `#6b7f4a` | Nature, semi-precious stones (moss agate / jade / labradorite), slow-paced brand storytelling |
+| 🤍 **Ivory** | `#faf6ee` / `#c3a263` | Clean ecommerce product grids, gift line-ups, maximum photo brightness |
+| ⚫ **Midnight Brass** | `#14110d` / `#d4a04a` | The only dark Editorial — jewelry on dark velvet, candle-lit gifting, moody seasonal drops |
 
 ### Swiss (4)
 
 | Theme | Anchor | Best for |
 |-------|--------|----------|
-| 🔵 **IKB Klein Blue** | `#002FA7` | General default, commercial launches, AI products, frameworks |
+| 🔵 **RV Gold** | `#b8924a` | General default, gift guides, FAQ, review recap carousels |
 | 🟡 **Lemon** | `#FFD500` | Youth, sports, retail, consumer, Y2K |
-| 🟢 **Lemon Green** | `#C5E803` | Eco, health, Gen Z, green brands |
-| 🟠 **Safety Orange** | `#FF6B35` | Alerts, news, industrial, energetic themes |
+| 🟢 **Sage** | `#8aa178` | Eco, semi-precious stones, spring drops |
+| 🟠 **Brick** | `#b85542` | Limited-stock urgency, Q4 last-call framing |
 
 To switch themes, just replace the `<section class="poster" data-theme="...">` attribute on the seed template; all CSS resolves through `var(--...)`.
 
@@ -317,7 +317,11 @@ guizang-social-card-skill/
 - Massimo Vignelli / Helvetica Forever / Swiss International Typographic Style grid systems
 - Apartamento / The Gentlewoman image-to-text ratios and human portraiture
 - Restrained-wins-the-feed samples from Xiaohongshu / Rednote
-- Guizang's social card practice
+- Rare Visual product photography catalog (rarevisual.com) — gold-filled, brass, semi-precious stones, leather
+
+## Brand voice (Rare Visual)
+
+`intentional, warm, grounded, discerning, effortless`. Warm brass and cream paper replace the upstream's ink-blue and cool grey. When generating cards, default to `warm-brass` Editorial — 80% of Rare Visual content fits it. Reach for `midnight-brass` only when the source imagery is already dark and warm. Reach for `stone-blue` only when the post needs credibility over warmth.
 
 ## Roadmap
 
@@ -364,7 +368,7 @@ Bugs, layout issues, new layout requests — Issues and PRs welcome. Priorities 
 
 ## License
 
-AGPL-3.0 © 2026 [op7418](https://github.com/op7418)
+AGPL-3.0 © 2026 [op7418](https://github.com/op7418) (upstream) · RV fork maintained by Jefflaw3333 / Rare Visual team
 
 This project is licensed under **GNU AGPL-3.0**. Key points:
 
