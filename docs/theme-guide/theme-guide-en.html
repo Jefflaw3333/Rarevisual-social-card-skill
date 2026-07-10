@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rare Visual — 主题样式系统指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* ============ Base / Reset ============ */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #faf6ee;
+  color: #1a1612;
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============ Layout ============ */
+.wrap { max-width: 1280px; margin: 0 auto; padding: 48px 32px 96px; }
+
+/* ============ Header ============ */
+.page-head {
+  border-bottom: 1px solid rgba(26,22,18,.12);
+  padding-bottom: 32px;
+  margin-bottom: 56px;
+}
+.page-head .eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #80766a;
+  margin-bottom: 12px;
+}
+.page-head h1 {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.page-head .lead {
+  font-size: 17px;
+  color: #6c5a44;
+  max-width: 720px;
+}
+.page-head .meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: #80766a;
+  text-transform: uppercase;
+}
+.page-head .meta a { color: #b8924a; text-decoration: none; border-bottom: 1px solid rgba(184,146,74,.3); }
+
+/* ============ Section ============ */
+section { margin-bottom: 88px; scroll-margin-top: 32px; }
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(26,22,18,.12);
+}
+.sec-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #b8924a;
+  flex-shrink: 0;
+}
+.sec-head h2 {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -.005em;
+}
+.sec-head .sec-sub {
+  margin-left: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: #80766a;
+  text-transform: uppercase;
+}
+
+.sec-lead {
+  font-size: 16px;
+  color: #6c5a44;
+  max-width: 760px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+/* ============ TOC ============ */
+.toc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: rgba(26,22,18,.12);
+  border: 1px solid rgba(26,22,18,.12);
+  margin-bottom: 56px;
+}
+.toc a {
+  background: #faf6ee;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: #1a1612;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.toc a:hover { background: #f0e9da; }
+.toc .toc-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: #b8924a;
+  text-transform: uppercase;
+}
+.toc .toc-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ============ Theme Cards (Editorial) ============ */
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.theme-card {
+  border: 1px solid rgba(26,22,18,.12);
+  background: #fff;
+  overflow: hidden;
+}
+.theme-card .tc-head {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(26,22,18,.08);
+}
+.theme-card .tc-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #80766a;
+  margin-bottom: 6px;
+}
+.theme-card h3 {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.005em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.theme-card .tc-tag {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .18em;
+  padding: 2px 6px;
+  background: #b8924a;
+  color: #fff;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.theme-card .tc-desc {
+  font-size: 13px;
+  color: #6c5a44;
+  margin-top: 4px;
+}
+
+/* The actual theme preview area (uses real CSS variables) */
+.tc-preview {
+  padding: 32px 24px;
+  min-height: 240px;
+  position: relative;
+}
+.tc-preview .tc-display {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -.01em;
+}
+.tc-preview .tc-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.tc-preview .tc-body {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 32ch;
+}
+.tc-preview .tc-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tc-preview .tc-kicker::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+  opacity: .4;
+}
+.tc-preview .tc-accent-strip {
+  height: 8px;
+  margin-bottom: 16px;
+}
+.tc-preview .tc-cta {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  letter-spacing: .04em;
+  margin-top: 16px;
+}
+
+/* Editorial theme overrides via data-theme */
+.tc-preview[data-style="editorial"] { color: var(--ink); background: var(--paper); }
+.tc-preview[data-style="editorial"] .tc-accent-strip { background: var(--accent); }
+
+/* Per-theme preview colors */
+.tc-preview[data-theme="warm-brass"] {
+  --paper: #f5efe4; --paper-2: #ebe1cf; --ink: #2a2018;
+  --muted: #7a6a58; --accent: #b8924a;
+}
+.tc-preview[data-theme="burnished-brass"] {
+  --paper: #ece1c8; --paper-2: #ddcfb0; --ink: #1f1610;
+  --muted: #6c5a44; --accent: #8f6a2e;
+}
+.tc-preview[data-theme="stone-blue"] {
+  --paper: #f2f4f5; --paper-2: #e5ebef; --ink: #0e1f33;
+  --muted: #5f6d78; --accent: #315d93;
+}
+.tc-preview[data-theme="olive-stone"] {
+  --paper: #f1ede0; --paper-2: #e3dccc; --ink: #1f2a1a;
+  --muted: #5d665d; --accent: #6b7f4a;
+}
+.tc-preview[data-theme="ivory"] {
+  --paper: #faf6ee; --paper-2: #f0e9da; --ink: #1a1612;
+  --muted: #80766a; --accent: #c3a263;
+}
+.tc-preview[data-theme="midnight-brass"] {
+  --paper: #14110d; --paper-2: #1f1a13; --ink: #ece2cf;
+  --muted: #9a8c75; --accent: #d4a04a;
+}
+
+/* Swiss theme overrides */
+.tc-preview[data-style="swiss"] {
+  --paper: #faf6ee; --ink: #1a1612;
+  --grey-1: #f0e9da; --grey-2: #d8cfba; --grey-3: #80766a;
+  color: var(--ink); background: var(--paper);
+}
+.tc-preview[data-style="swiss"] .tc-display {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 48px;
+  letter-spacing: -.02em;
+  line-height: 1.0;
+  text-transform: none;
+}
+.tc-preview[data-style="swiss"] .tc-sub {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #6c5a44;
+}
+.tc-preview[data-style="swiss"] .tc-body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .04em;
+  line-height: 1.6;
+  border-left: 2px solid var(--accent, #b8924a);
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+.tc-preview[data-style="swiss"] .tc-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+}
+.tc-preview[data-style="swiss"] .tc-accent-block {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .04em;
+  margin-bottom: 12px;
+}
+.tc-preview[data-style="swiss"] .tc-cta {
+  border-radius: 0;
+  border: none;
+  padding: 12px 0;
+  border-bottom: 2px solid currentColor;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Per-Swiss-accent preview colors */
+.tc-preview[data-accent="rv-gold"] { --accent: #b8924a; --accent-on: #fff; }
+.tc-preview[data-accent="honey"] { --accent: #e8b54d; --accent-on: #1a1612; }
+.tc-preview[data-accent="sage"] { --accent: #8aa178; --accent-on: #fff; }
+.tc-preview[data-accent="brick"] { --accent: #b85542; --accent-on: #fff; }
+
+.tc-foot {
+  padding: 16px 24px;
+  background: rgba(26,22,18,.04);
+  border-top: 1px solid rgba(26,22,18,.08);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+.tc-foot dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #80766a;
+  font-weight: 500;
+}
+.tc-foot dd {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #1a1612;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+/* ============ Usage Table ============ */
+table.usage {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid rgba(26,22,18,.12);
+}
+table.usage th, table.usage td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(26,22,18,.08);
+  vertical-align: top;
+}
+table.usage th {
+  background: #f0e9da;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #6c5a44;
+  font-weight: 500;
+}
+table.usage td .pill {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .04em;
+  padding: 3px 8px;
+  border: 1px solid;
+  margin-right: 4px;
+}
+table.usage tr:last-child td { border-bottom: none; }
+table.usage td.cond { font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+
+/* ============ Color Tokens Table ============ */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.color-card {
+  border: 1px solid rgba(26,22,18,.12);
+  background: #fff;
+  overflow: hidden;
+}
+.color-card .cc-head {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(26,22,18,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.color-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.color-card .cc-style {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #80766a;
+}
+.color-card .cc-rows {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+}
+.color-card .cc-row {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid rgba(26,22,18,.04);
+}
+.color-card .cc-swatch {
+  width: 40px;
+  height: 28px;
+  border: 1px solid rgba(26,22,18,.12);
+  border-radius: 2px;
+}
+.color-card .cc-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+.color-card .cc-hex {
+  font-size: 11px;
+  color: #80766a;
+}
+.color-card .cc-rgb {
+  font-size: 10px;
+  color: #80766a;
+}
+
+/* ============ Typography ============ */
+.type-display {
+  background: #fff;
+  border: 1px solid rgba(26,22,18,.12);
+  padding: 40px 32px;
+  margin-bottom: 16px;
+}
+.type-display .td-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #b8924a;
+  margin-bottom: 16px;
+}
+.type-display .td-sample {
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.type-display .td-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #80766a;
+  letter-spacing: .04em;
+}
+
+.t-row-editorial { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+.t-row-swiss { font-family: 'Inter', sans-serif; }
+.t-row-mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* Editorial type scale samples */
+.t-sample-display { font-size: 124px; font-weight: 500; letter-spacing: -.01em; line-height: 1; }
+.t-sample-xl { font-size: 88px; font-weight: 500; letter-spacing: -.005em; line-height: 1.05; }
+.t-sample-md { font-size: 56px; font-weight: 500; line-height: 1.1; }
+.t-sample-sub { font-size: 36px; font-weight: 400; font-style: italic; line-height: 1.2; }
+.t-sample-pull { font-size: 64px; font-weight: 500; font-style: italic; line-height: 1.1; }
+.t-sample-body { font-family: 'Playfair Display', 'Noto Serif SC', serif; font-size: 28px; font-weight: 400; line-height: 1.55; max-width: 28ch; }
+
+.t-sample-hero { font-family: 'Inter', sans-serif; font-size: 240px; font-weight: 200; letter-spacing: -.04em; line-height: .95; }
+.t-sample-stmt { font-family: 'Inter', sans-serif; font-size: 180px; font-weight: 200; letter-spacing: -.03em; line-height: .95; }
+.t-sample-xl-swiss { font-family: 'Inter', sans-serif; font-size: 120px; font-weight: 300; letter-spacing: -.02em; line-height: 1.0; }
+.t-sample-md-swiss { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 400; line-height: 1.1; }
+
+.t-sample-kicker { font-family: 'IBM Plex Mono', monospace; font-size: 21px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; }
+.t-sample-meta { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 500; letter-spacing: .20em; text-transform: uppercase; }
+
+/* ============ Rules / Notes ============ */
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.note {
+  padding: 20px;
+  background: #fff;
+  border-left: 3px solid #b8924a;
+  border-top: 1px solid rgba(26,22,18,.08);
+  border-right: 1px solid rgba(26,22,18,.08);
+  border-bottom: 1px solid rgba(26,22,18,.08);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.note h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #b8924a;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.note strong { color: #1a1612; }
+
+/* ============ Footer ============ */
+.foot {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(26,22,18,.12);
+  text-align: center;
+  color: #80766a;
+  font-size: 12px;
+}
+.foot a { color: #b8924a; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ HEADER ============ -->
+<header class="page-head">
+  <div class="eyebrow">Rare Visual · Style System v1.0.0-rv.1</div>
+  <h1>10 套主题样式系统</h1>
+  <p class="lead">
+    Rare Visual 小红书图文 / 公众号封面 / Live Photo 动图的视觉设计系统。
+    fork 自 <a href="https://github.com/op7418/guizang-social-card-skill">guizang-social-card-skill</a> v0.15 (AGPL-3.0)，
+    色板、词库、品类路由全部对齐 Rare Visual 品牌调性 —— <em>intentional, warm, grounded, discerning, effortless</em>。
+  </p>
+  <div class="meta">
+    <span>6 Editorial · 4 Swiss</span>
+    <span>·</span>
+    <span>Default: warm-brass + rv-gold</span>
+    <span>·</span>
+    <a href="https://github.com/Jefflaw3333/Rarevisual-social-card-skill">Jefflaw3333 / Rarevisual-social-card-skill</a>
+  </div>
+</header>
+
+<!-- ============ TOC ============ -->
+<nav class="toc">
+  <a href="#section-1"><span class="toc-num">§ 01</span><span class="toc-name">Editorial · 6 套杂志风主题</span></a>
+  <a href="#section-2"><span class="toc-num">§ 02</span><span class="toc-name">Swiss · 4 套瑞士国际风</span></a>
+  <a href="#section-3"><span class="toc-num">§ 03</span><span class="toc-name">使用指南 · 什么内容用什么主题</span></a>
+  <a href="#section-4"><span class="toc-num">§ 04</span><span class="toc-name">色号 · 完整 token 表</span></a>
+  <a href="#section-5"><span class="toc-num">§ 05</span><span class="toc-name">排版规范</span></a>
+  <a href="#section-6"><span class="toc-num">§ 06</span><span class="toc-name">使用规则 · 避坑清单</span></a>
+</nav>
+
+<!-- ============ SECTION 1: EDITORIAL THEMES ============ -->
+<section id="section-1">
+  <div class="sec-head">
+    <span class="sec-num">§ 01</span>
+    <h2>Editorial Magazine × E-ink</h2>
+    <span class="sec-sub">6 套杂志风主题</span>
+  </div>
+  <p class="sec-lead">
+    像 <em>Monocle / Kinfolk / Cereal</em> 那样克制的版面：serif 标题 + 暖纸 base + 局部 accent 高亮。
+    适合叙事、生活方式、产品摄影、礼盒指南、创始人随笔。
+    <strong style="color:#b8924a">默认主题：warm-brass</strong>
+  </p>
+
+  <div class="themes-grid">
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-01 · Editorial · DEFAULT</div>
+        <h3>Warm Brass <span class="tc-tag">RV 招牌</span></h3>
+        <p class="tc-desc">暖黄铜 · 米色纸 · 深棕墨</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="warm-brass">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Handcrafted · Daily Wear</div>
+        <h4 class="tc-display">The necklace you'll forget you're wearing</h4>
+        <p class="tc-sub">Gold-filled · won't quit on you.</p>
+        <p class="tc-body">A necklace made for Mondays, date nights, and everything in between. Solid brass tone evoking unboxing, warm cream paper background like a product-photography backdrop.</p>
+        <a class="tc-cta">Shop the look</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#f5efe4</dd>
+        <dt>Ink</dt><dd>#2a2018</dd>
+        <dt>Accent</dt><dd>#b8924a</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-02 · Editorial</div>
+        <h3>Burnished Brass</h3>
+        <p class="tc-desc">深度黄铜 · patina-aged · 厚重</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="burnished-brass">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Collection · Drop No. 04</div>
+        <h4 class="tc-display">For the season of deeper gold</h4>
+        <p class="tc-sub">Patina-aged brass · rich warm tones.</p>
+        <p class="tc-body">Richer antique-paper feel. Good when imagery has warm wood, deep gold, or tan-leather tones. Use for collection launches and "best of" roundups.</p>
+        <a class="tc-cta">Discover</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#ece1c8</dd>
+        <dt>Ink</dt><dd>#1f1610</dd>
+        <dt>Accent</dt><dd>#8f6a2e</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-03 · Editorial</div>
+        <h3>Stone Blue</h3>
+        <p class="tc-desc">冷瓷蓝 · 理性 · 材质科普</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="stone-blue">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Materials · Education</div>
+        <h4 class="tc-display">Gold-filled vs plated</h4>
+        <p class="tc-sub">100× more gold. Here's why it matters.</p>
+        <p class="tc-body">The cool counterpoint to warm-brass. Use when post needs credibility and clarity: quality education, FAQ, comparison posts. Pairs with crisp product line-ups and swatch boards.</p>
+        <a class="tc-cta">Read the guide</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#f2f4f5</dd>
+        <dt>Ink</dt><dd>#0e1f33</dd>
+        <dt>Accent</dt><dd>#315d93</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-04 · Editorial</div>
+        <h3>Olive Stone</h3>
+        <p class="tc-desc">雾橄榄 · 自然户外 · 半宝石</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="olive-stone">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Stones · Field Notes</div>
+        <h4 class="tc-display">Moss agate, jade, labradorite</h4>
+        <p class="tc-sub">Semi-precious · natural light.</p>
+        <p class="tc-body">Semi-precious stone colors (moss agate, jade, labradorite) sit naturally on this palette. Use when imagery leans into nature, natural materials, or slow-paced brand-storytelling.</p>
+        <a class="tc-cta">Shop stones</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#f1ede0</dd>
+        <dt>Ink</dt><dd>#1f2a1a</dd>
+        <dt>Accent</dt><dd>#6b7f4a</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-05 · Editorial</div>
+        <h3>Ivory</h3>
+        <p class="tc-desc">最浅奶油 · 简洁电商 · 礼盒 line-up</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="ivory">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Shop · The Edit</div>
+        <h4 class="tc-display">5 pieces she'll reach for daily</h4>
+        <p class="tc-sub">Curated · everyday capsule.</p>
+        <p class="tc-body">The lightest warm paper in the system. Good for ecommerce-style product grid posts where you want maximum photo brightness. Pair with full-bleed product shots and minimal copy.</p>
+        <a class="tc-cta">See the edit</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#faf6ee</dd>
+        <dt>Ink</dt><dd>#1a1612</dd>
+        <dt>Accent</dt><dd>#c3a263</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">E-06 · Editorial · DARK</div>
+        <h3>Midnight Brass</h3>
+        <p class="tc-desc">唯一暗调 · 烛光 / 丝绒 / 礼盒夜</p>
+      </div>
+      <div class="tc-preview" data-style="editorial" data-theme="midnight-brass">
+        <div class="tc-accent-strip"></div>
+        <div class="tc-kicker">Limited · After Hours</div>
+        <h4 class="tc-display">For the candlelit unwrap</h4>
+        <p class="tc-sub">Dark · gilt brass accent.</p>
+        <p class="tc-body">Use only when source imagery is already dark and warm. Velvet jewelry trays, candle-lit gifting moments, moody seasonal drops. The gilt accent stays warm and metallic — never neon.</p>
+        <a class="tc-cta">Shop limited</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#14110d</dd>
+        <dt>Ink</dt><dd>#ece2cf</dd>
+        <dt>Accent</dt><dd>#d4a04a</dd>
+        <dt>Style</dt><dd>editorial</dd>
+      </dl>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 2: SWISS THEMES ============ -->
+<section id="section-2">
+  <div class="sec-head">
+    <span class="sec-num">§ 02</span>
+    <h2>Swiss International</h2>
+    <span class="sec-sub">4 套瑞士国际风</span>
+  </div>
+  <p class="sec-lead">
+    网格、单一锚点色、直角发丝线、极致字号对比。Inter 字体 + 超细 display（weight 200/300）。
+    适合材质科普、礼盒攻略、FAQ、客户证言矩阵、复盘轮播。
+    <strong style="color:#b8924a">默认锚色：rv-gold</strong>
+  </p>
+
+  <div class="themes-grid">
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">S-01 · Swiss · DEFAULT</div>
+        <h3>RV Gold</h3>
+        <p class="tc-desc">古铜金 · 默认 · 礼盒攻略 / FAQ</p>
+      </div>
+      <div class="tc-preview" data-style="swiss" data-accent="rv-gold">
+        <div class="tc-kicker">Gift Guide · By Recipient</div>
+        <div class="tc-accent-block">12 picks · all under $80</div>
+        <h4 class="tc-display">Gifts that look like you spent hours finding them</h4>
+        <p class="tc-sub">When it took 15 minutes.</p>
+        <p class="tc-body">Default Swiss accent for Rare Visual. Same restrained brass tone as Warm Brass Editorial, but in Swiss's strict grid layout.</p>
+        <a class="tc-cta">Shop the guide</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#faf6ee</dd>
+        <dt>Ink</dt><dd>#1a1612</dd>
+        <dt>Accent</dt><dd>#b8924a</dd>
+        <dt>Style</dt><dd>swiss</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">S-02 · Swiss</div>
+        <h3>Honey</h3>
+        <p class="tc-desc">蜜金色 · Q4 gifting · 情人节 / 母亲节</p>
+      </div>
+      <div class="tc-preview" data-style="swiss" data-accent="honey">
+        <div class="tc-kicker">Q4 · Holiday Edit</div>
+        <div class="tc-accent-block">Last 5 days for Christmas delivery</div>
+        <h4 class="tc-display">For the person who already has everything</h4>
+        <p class="tc-sub">A gift that feels one-of-a-kind.</p>
+        <p class="tc-body">Honey-gold sits in the same warm family as RV gold but with more energy. Use for Q4 gift-season content, Valentine's Day, Mother's Day.</p>
+        <a class="tc-cta">Shop gifting</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#faf6ee</dd>
+        <dt>Ink</dt><dd>#1a1612</dd>
+        <dt>Accent</dt><dd>#e8b54d</dd>
+        <dt>Style</dt><dd>swiss</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">S-03 · Swiss</div>
+        <h3>Sage</h3>
+        <p class="tc-desc">鼠尾草绿 · 环保 / 春款 / 半宝石</p>
+      </div>
+      <div class="tc-preview" data-style="swiss" data-accent="sage">
+        <div class="tc-kicker">Stones · Spring Drop</div>
+        <div class="tc-accent-block">Moss agate · jade · serpentine</div>
+        <h4 class="tc-display">Green stones for the spring season</h4>
+        <p class="tc-sub">Naturally calming · naturally Rare Visual.</p>
+        <p class="tc-body">Stones, natural materials, sustainability messaging. Avoid if the post has saturated green product photography (jade saturated against sage will clash).</p>
+        <a class="tc-cta">Shop green</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#faf6ee</dd>
+        <dt>Ink</dt><dd>#1a1612</dd>
+        <dt>Accent</dt><dd>#8aa178</dd>
+        <dt>Style</dt><dd>swiss</dd>
+      </dl>
+    </article>
+
+    <article class="theme-card">
+      <div class="tc-head">
+        <div class="tc-num">S-04 · Swiss</div>
+        <h3>Brick</h3>
+        <p class="tc-desc">陶土红 · 限量 / 紧急提醒</p>
+      </div>
+      <div class="tc-preview" data-style="swiss" data-accent="brick">
+        <div class="tc-kicker">Limited · Last Call</div>
+        <div class="tc-accent-block">8 of 200 remaining</div>
+        <h4 class="tc-display">Limited run · selling out tonight</h4>
+        <p class="tc-sub">Don't wait.</p>
+        <p class="tc-body">Terracotta reads as warm/earthy and ties back to leather and brass — not industrial like Safety Orange. Use sparingly for "last chance" or "limited edition" framing.</p>
+        <a class="tc-cta">Shop now</a>
+      </div>
+      <dl class="tc-foot">
+        <dt>Paper</dt><dd>#faf6ee</dd>
+        <dt>Ink</dt><dd>#1a1612</dd>
+        <dt>Accent</dt><dd>#b85542</dd>
+        <dt>Style</dt><dd>swiss</dd>
+      </dl>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 3: USAGE GUIDE ============ -->
+<section id="section-3">
+  <div class="sec-head">
+    <span class="sec-num">§ 03</span>
+    <h2>使用指南</h2>
+    <span class="sec-sub">什么内容用什么主题</span>
+  </div>
+  <p class="sec-lead">
+    按内容类型推荐最适合的主题。两个原则：(1) <strong style="color:#b8924a">warm-brass</strong> 是默认 — 不确定就选它；
+    (2) <strong style="color:#b8924a">暖色 Editorial</strong> 优先用于产品摄影和故事叙述，<strong style="color:#315d93">Swiss</strong> 优先用于工具型 / 数据型内容。
+  </p>
+
+  <table class="usage">
+    <thead>
+      <tr>
+        <th>内容类型 / 场景</th>
+        <th>推荐主题</th>
+        <th>Style</th>
+        <th>理由</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>小红书产品摄影 · 主推 / 新品</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">warm-brass</span></td>
+        <td>Editorial</td>
+        <td>默认 RV 招牌色，呼应金箔/黄铜饰品，米色纸配手部产品图最自然。</td>
+      </tr>
+      <tr>
+        <td><strong>礼盒攻略 · 按送礼对象分组</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">rv-gold</span> Swiss</td>
+        <td>Swiss</td>
+        <td>Grid-based 列表最适合 Swiss 排版，结构清晰、CTA 醒目。</td>
+      </tr>
+      <tr>
+        <td><strong>工艺幕后 · artisan / small-batch</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">warm-brass</span> / <span class="pill" style="color:#8f6a2e;border-color:#8f6a2e">burnished-brass</span></td>
+        <td>Editorial</td>
+        <td>工序 + 手部 + 工作台素材最适合 editorial 暖调；burnished-brass 增加历史厚重感。</td>
+      </tr>
+      <tr>
+        <td><strong>材质科普 · gold-filled vs plated</strong></td>
+        <td class="cond"><span class="pill" style="color:#315d93;border-color:#315d93">stone-blue</span></td>
+        <td>Editorial</td>
+        <td>冷色 Editorial 给科普文字一种 credible 的感觉，不喧宾夺主。</td>
+      </tr>
+      <tr>
+        <td><strong>半宝石 / 自然系新品</strong></td>
+        <td class="cond"><span class="pill" style="color:#6b7f4a;border-color:#6b7f4a">olive-stone</span> / <span class="pill" style="color:#8aa178;border-color:#8aa178">sage</span></td>
+        <td>任意</td>
+        <td>olive-stone 给 Editorial，sage 给 Swiss。色彩和素材自身呼应。</td>
+      </tr>
+      <tr>
+        <td><strong>5 套穿搭 / "5 ways to wear"</strong></td>
+        <td class="cond"><span class="pill" style="color:#c3a263;border-color:#c3a263">ivory</span></td>
+        <td>Editorial</td>
+        <td>最浅 cream 让产品图最亮，不抢视觉。</td>
+      </tr>
+      <tr>
+        <td><strong>FAQ / 客户问答</strong></td>
+        <td class="cond"><span class="pill" style="color:#315d93;border-color:#315d93">stone-blue</span> / <span class="pill" style="color:#b8924a;border-color:#b8924a">rv-gold</span></td>
+        <td>Swiss</td>
+        <td>信息密度高的内容用 Swiss 更整齐。</td>
+      </tr>
+      <tr>
+        <td><strong>客户证言矩阵</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">rv-gold</span></td>
+        <td>Swiss</td>
+        <td>用 S12 Matrix layout，rv-gold 给温暖、可信感。</td>
+      </tr>
+      <tr>
+        <td><strong>Q4 gifting / 圣诞倒计时</strong></td>
+        <td class="cond"><span class="pill" style="color:#e8b54d;border-color:#e8b54d">honey</span></td>
+        <td>Swiss</td>
+        <td>节日能量，温暖而不俗气。</td>
+      </tr>
+      <tr>
+        <td><strong>限量发售 / 即将售罄</strong></td>
+        <td class="cond"><span class="pill" style="color:#b85542;border-color:#b85542">brick</span></td>
+        <td>Swiss</td>
+        <td>陶土红 = 紧急 + 温暖（不是工业红）。</td>
+      </tr>
+      <tr>
+        <td><strong>情人节 / 母亲节 / 周年纪念</strong></td>
+        <td class="cond"><span class="pill" style="color:#e8b54d;border-color:#e8b54d">honey</span></td>
+        <td>Editorial / Swiss</td>
+        <td>节庆色，但保持 RV 暖中性，不过分甜。</td>
+      </tr>
+      <tr>
+        <td><strong>暗调摄影 · 烛光 / 丝绒背景</strong></td>
+        <td class="cond"><span class="pill" style="color:#d4a04a;border-color:#d4a04a">midnight-brass</span></td>
+        <td>Editorial</td>
+        <td>唯一暗调。Material 真暗时才用。</td>
+      </tr>
+      <tr>
+        <td><strong>微信公众号 21:9 + 1:1 主封面</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">warm-brass</span> / <span class="pill" style="color:#b8924a;border-color:#b8924a">rv-gold</span></td>
+        <td>任一</td>
+        <td>封面图用 Editorial 内页，瑞士封面用 Swiss。</td>
+      </tr>
+      <tr>
+        <td><strong>微信公众号文章内页图</strong></td>
+        <td class="cond"><span class="pill" style="color:#c3a263;border-color:#c3a263">ivory</span> / <span class="pill" style="color:#b8924a;border-color:#b8924a">rv-gold</span></td>
+        <td>任一</td>
+        <td>正文图保持轻、净，不抢文章标题。</td>
+      </tr>
+      <tr>
+        <td><strong>不确定时</strong></td>
+        <td class="cond"><span class="pill" style="color:#b8924a;border-color:#b8924a">warm-brass</span></td>
+        <td>Editorial</td>
+        <td>这是默认。80% 场景都能用。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ SECTION 4: COLOR TOKENS ============ -->
+<section id="section-4">
+  <div class="sec-head">
+    <span class="sec-num">§ 04</span>
+    <h2>色号 · 完整 token 表</h2>
+    <span class="sec-sub">CSS variables · HEX · RGB</span>
+  </div>
+  <p class="sec-lead">
+    所有主题通过 <code style="font-family:monospace;background:#fff;padding:2px 6px;border:1px solid rgba(26,22,18,.12)">data-theme</code> 或 <code style="font-family:monospace;background:#fff;padding:2px 6px;border:1px solid rgba(26,22,18,.12)">data-accent</code> 切换。
+    切换只需改 <code style="font-family:monospace">&lt;html data-theme="..."&gt;</code> 一行 —— 所有 CSS 变量自动 resolve。
+  </p>
+
+  <div class="color-grid">
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>warm-brass</h3>
+        <span class="cc-style">Editorial · DEFAULT</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#f5efe4"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#f5efe4 · 245,239,228</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#ebe1cf"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#ebe1cf · 235,225,207</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#2a2018"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#2a2018 · 42,32,24</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#7a6a58"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#7a6a58 · 122,106,88</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#b8924a"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#b8924a · 184,146,74</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#d9c19a"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#d9c19a · 217,193,154</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>burnished-brass</h3>
+        <span class="cc-style">Editorial · deeper</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#ece1c8"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#ece1c8 · 236,225,200</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#ddcfb0"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#ddcfb0 · 221,207,176</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1f1610"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1f1610 · 31,22,16</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#6c5a44"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#6c5a44 · 108,90,68</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#8f6a2e"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#8f6a2e · 143,106,46</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#c7a87a"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#c7a87a · 199,168,122</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>stone-blue</h3>
+        <span class="cc-style">Editorial · cool</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#f2f4f5"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#f2f4f5 · 242,244,245</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#e5ebef"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#e5ebef · 229,235,239</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#0e1f33"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#0e1f33 · 14,31,51</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#5f6d78"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#5f6d78 · 95,109,120</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#315d93"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#315d93 · 49,93,147</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#d7e1ec"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#d7e1ec · 215,225,236</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>olive-stone</h3>
+        <span class="cc-style">Editorial · natural</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#f1ede0"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#f1ede0 · 241,237,224</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#e3dccc"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#e3dccc · 227,220,204</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1f2a1a"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1f2a1a · 31,42,26</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#5d665d"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#5d665d · 93,102,93</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#6b7f4a"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#6b7f4a · 107,127,74</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#c8d2b5"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#c8d2b5 · 200,210,181</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>ivory</h3>
+        <span class="cc-style">Editorial · clean</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#faf6ee"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#faf6ee · 250,246,238</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#f0e9da"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#f0e9da · 240,233,218</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1a1612 · 26,22,18</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#80766a"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#80766a · 128,118,106</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#c3a263"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#c3a263 · 195,162,99</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#e3d4b3"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#e3d4b3 · 227,212,179</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>midnight-brass</h3>
+        <span class="cc-style">Editorial · DARK only</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#14110d"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#14110d · 20,17,13</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1f1a13"></div><div><div class="cc-name">--paper-2</div><div class="cc-hex">#1f1a13 · 31,26,19</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#ece2cf"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#ece2cf · 236,226,207</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#9a8c75"></div><div><div class="cc-name">--muted</div><div class="cc-hex">#9a8c75 · 154,140,117</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#d4a04a"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#d4a04a · 212,160,74</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#3a2a14"></div><div><div class="cc-name">--accent-soft</div><div class="cc-hex">#3a2a14 · 58,42,20</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>rv-gold</h3>
+        <span class="cc-style">Swiss · DEFAULT</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#faf6ee"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#faf6ee · 250,246,238</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1a1612 · 26,22,18</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#f0e9da"></div><div><div class="cc-name">--grey-1</div><div class="cc-hex">#f0e9da · 240,233,218</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#d8cfba"></div><div><div class="cc-name">--grey-2</div><div class="cc-hex">#d8cfba · 216,207,186</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#80766a"></div><div><div class="cc-name">--grey-3</div><div class="cc-hex">#80766a · 128,118,106</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#b8924a"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#b8924a · 184,146,74</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>honey</h3>
+        <span class="cc-style">Swiss · gifting</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#faf6ee"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#faf6ee</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1a1612</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#e8b54d"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#e8b54d · 232,181,77</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--accent-on</div><div class="cc-hex">深字 on 浅 accent</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>sage</h3>
+        <span class="cc-style">Swiss · natural</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#faf6ee"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#faf6ee</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1a1612</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#8aa178"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#8aa178 · 138,161,120</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#ffffff"></div><div><div class="cc-name">--accent-on</div><div class="cc-hex">白字 on 暗 accent</div></div></div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="cc-head">
+        <h3>brick</h3>
+        <span class="cc-style">Swiss · limited</span>
+      </div>
+      <div class="cc-rows">
+        <div class="cc-row"><div class="cc-swatch" style="background:#faf6ee"></div><div><div class="cc-name">--paper</div><div class="cc-hex">#faf6ee</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#1a1612"></div><div><div class="cc-name">--ink</div><div class="cc-hex">#1a1612</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#b85542"></div><div><div class="cc-name">--accent ★</div><div class="cc-hex">#b85542 · 184,85,66</div></div></div>
+        <div class="cc-row"><div class="cc-swatch" style="background:#ffffff"></div><div><div class="cc-name">--accent-on</div><div class="cc-hex">白字 on 暗 accent</div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 5: TYPOGRAPHY ============ -->
+<section id="section-5">
+  <div class="sec-head">
+    <span class="sec-num">§ 05</span>
+    <h2>排版规范</h2>
+    <span class="sec-sub">Font stack · size · weight</span>
+  </div>
+  <p class="sec-lead">
+    字体规则：**Editorial 用 Playfair Display (serif) + Noto Serif SC + IBM Plex Mono**；**Swiss 用 Inter + Noto Sans SC + IBM Plex Mono**。
+    黄金法则：<strong style="color:#b8924a">越大越细</strong> —— 大字反而用更轻的 weight。
+  </p>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin:32px 0 16px;">Editorial Magazine · Type Scale</h3>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.h-display · 124px / 500 / +.01em</div>
+    <div class="td-sample t-sample-display">Handcrafted · everyday</div>
+    <div class="td-meta">Hero 标题 · 单图 3:4 卡片用 · 不要 wrap 到第 3 行</div>
+  </div>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.h-xl · 88px / 500 / +.005em</div>
+    <div class="td-sample t-sample-xl">A necklace you'll reach for every morning</div>
+    <div class="td-meta">Section 标题 · 2 行内</div>
+  </div>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.h-md · 56px / 500</div>
+    <div class="td-sample t-sample-md">Five pieces that cover a workweek</div>
+    <div class="td-meta">Mid 标题 · 列表卡或子页</div>
+  </div>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.h-sub · 36px / 400 / italic</div>
+    <div class="td-sample t-sample-sub">Gold-filled, won't quit on you.</div>
+    <div class="td-meta">副标题 · Playfair italic · 总是配 display 后</div>
+  </div>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.pullquote · 64px / 500 / italic</div>
+    <div class="td-sample t-sample-pull">"The first necklace I've worn every day for a month."</div>
+    <div class="td-meta">客户引言 · ≤ 3 行 · 不要超过 4 行</div>
+  </div>
+  <div class="type-display t-row-editorial">
+    <div class="td-label">.lead · 28px / 400 · serif body</div>
+    <div class="td-sample t-sample-body">A necklace made for Mondays, date nights, and everything in between. Gold-filled chain that won't quit on you.</div>
+    <div class="td-meta">正文 · max-width 28ch · 1.55 line-height</div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin:48px 0 16px;">Editorial · Mono Labels</h3>
+  <div class="type-display t-row-mono">
+    <div class="td-label">.kicker · 21px / 500 / +.22em</div>
+    <div class="td-sample t-sample-kicker" style="margin-bottom:16px;">Issue · Handcrafted · No. 04</div>
+    <div class="td-label">.meta · 18px / 500 / +.20em</div>
+    <div class="td-sample t-sample-meta">by Sophia · Austin · Verified buyer</div>
+    <div class="td-meta" style="margin-top:24px;">kicker 是 hero 前的分类标签 · meta 是引言出处 · 都用 IBM Plex Mono</div>
+  </div>
+
+  <h3 style="font-family:'Inter',sans-serif;font-size:24px;font-weight:600;margin:48px 0 16px;letter-spacing:-.01em;">Swiss International · Type Scale</h3>
+  <div class="type-display t-row-swiss">
+    <div class="td-label">.h-hero · 240px / 200</div>
+    <div class="td-sample t-sample-hero">Gifts for her</div>
+    <div class="td-meta">最大 hero · 仅 3-5 字短标题用</div>
+  </div>
+  <div class="type-display t-row-swiss">
+    <div class="td-label">.h-statement · 180px / 200</div>
+    <div class="td-sample t-sample-stmt">12 picks · all under $80</div>
+    <div class="td-meta">KPI / statement · ultra-light</div>
+  </div>
+  <div class="type-display t-row-swiss">
+    <div class="td-label">.h-xl · 120px / 300</div>
+    <div class="td-sample t-sample-xl-swiss">For the person who already has everything</div>
+    <div class="td-meta">Section 标题 · weight 300 而非 700</div>
+  </div>
+  <div class="type-display t-row-swiss">
+    <div class="td-label">.h-md · 56px / 400</div>
+    <div class="td-sample t-sample-md-swiss">A gift that looks like you spent hours</div>
+    <div class="td-meta">Mid 标题</div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6: RULES ============ -->
+<section id="section-6">
+  <div class="sec-head">
+    <span class="sec-num">§ 06</span>
+    <h2>使用规则 · 避坑清单</h2>
+    <span class="sec-sub">Hard rules from RV brand voice</span>
+  </div>
+  <p class="sec-lead">
+    这些是 Rare Visual 品牌调性 + 上游 Guizang 视觉规范合并的硬性规则。违反任意一条 = 视觉失控。
+  </p>
+
+  <div class="notes">
+    <div class="note">
+      <h4>1. 越大越细</h4>
+      <p>Editorial 大字反而用更细 weight（500 而非 900）。Swiss display 必须 ≤ 300。绝对禁止 Editorial 标题用 700+ weight 配 124px+ size。</p>
+    </div>
+    <div class="note">
+      <h4>2. 一个 accent</h4>
+      <p>Swiss 只能用一个 accent。绝对不要混 rv-gold + honey 同时出现在一个 deck。同理 Editorial accent 只用一次：section marker / page number / pull quote rule。</p>
+    </div>
+    <div class="note">
+      <h4>3. 永远不要纯黑纯白</h4>
+      <p>背景用 #faf6ee (ivory) 而非 #ffffff；ink 用 #1a1612 而非 #000000。Midnight Brass 用 #14110d 而非 #000000。纯值会破坏层次感。</p>
+    </div>
+    <div class="note">
+      <h4>4. 字号下限：22-28px</h4>
+      <p>在 1080×1440 卡上，最小可读字号 = 22-28px。Swiss .t-meta ≥ 18px。低于这个，mobile 下采样就糊了。Validator R4 会强制检查。</p>
+    </div>
+    <div class="note">
+      <h4>5. Editorial 一套卡一个主题</h4>
+      <p>不要在同一 deck 里混 warm-brass 和 stone-blue 的 accent。只能用不同 .paper / .accent-soft 做 variation。Validator 会检测 accent 越界。</p>
+    </div>
+    <div class="note">
+      <h4>6. Midnight Brass 限制</h4>
+      <p>这是唯一的暗调 Editorial。仅用于 source imagery 已经暗 + 暖的场景。Hero cover、节日 drop 可用，其他一律用 warm-brass。</p>
+    </div>
+    <div class="note">
+      <h4>7. 不要 AI 紫 / 霓虹绿</h4>
+      <p>绝对禁止 #A855F7 (AI purple)、#00FF85 (neon green)、chrome-bling。Rare Visual 调性是 <em>intentional, warm, grounded</em>，不要纯数字炫技色。</p>
+    </div>
+    <div class="note">
+      <h4>8. 标题最多 2 行</h4>
+      <p>.h-display 在 desktop 最多 2 行。超出就改用 .h-xl（88px）而非加大字号。Hero 区域内文 ≤ 4 行。</p>
+    </div>
+    <div class="note">
+      <h4>9. 卡片填充 ≥ 75%</h4>
+      <p>3:4 卡的内容（text + image + data）必须覆盖 ≥ 75% 画布高度。任何 >15% 画布高度的纯空白都需要 "留白理由"：hero image breathing / 单句 manifesto / 段落前后 whitespace。</p>
+    </div>
+    <div class="note">
+      <h4>10. Editorial 必须有氛围层</h4>
+      <p>不能纯色 cream 背景加文字就交付。必须有 WebGL ink-flow canvas 或 paper grain overlay（grain opacity .35, multiply）。Magazine-bg-webgl.js 自动 wire。</p>
+    </div>
+    <div class="note">
+      <h4>11. 不要堆砌 emoji</h4>
+      <p>Rare Visual 调性是 curated / intentional，emoji 会破坏。Lucide icons 是允许的，但每个组件最多 1-2 个。</p>
+    </div>
+    <div class="note">
+      <h4>12. 不要 fake 数据</h4>
+      <p>"92% 用户满意" 这种伪造数据禁止。如果要 placeholder，写 "SAMPLE" 或用 `[X%]` 标识。客户引言用 "verified buyer" 或 "user-submitted"，但必须有真人出处。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <p>
+    <strong>Rare Visual Social Card Skill · v1.0.0-rv.1</strong><br>
+    fork of <a href="https://github.com/op7418/guizang-social-card-skill">guizang-social-card-skill</a> v0.15 · AGPL-3.0<br>
+    <a href="https://github.com/Jefflaw3333/Rarevisual-social-card-skill">Jefflaw3333 / Rarevisual-social-card-skill</a> · rarevisual.com
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
